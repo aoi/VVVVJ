@@ -1,0 +1,7 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
+   <PATCH nodename="C:\workspace\uminism\vvvv\lalala\lalala_01.v4p" systemname="lalala_01" filename="C:\workspace\uminism\vvvv\lalala\lalala_01.v4p">
+   <BOUNDS type="Window" left="0" top="0" width="18300" height="16200">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.0.0">
+   </PACK>
+   </PATCH>
