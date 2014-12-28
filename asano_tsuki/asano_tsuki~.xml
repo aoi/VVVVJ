@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\asano_tsuki\asano_tsuki.v4p" systemname="asano_tsuki" filename="C:\workspace\uminism\vvvv\asano_tsuki\asano_tsuki.v4p">
-   <BOUNDS type="Window" left="16395" top="7200" width="14400" height="16200">
+   <BOUNDS type="Window" left="10710" top="1950" width="14400" height="16200">
    </BOUNDS>
-   <PACK Name="addonpack" Version="31.9.0">
+   <PACK Name="addonpack" Version="33.0.0">
    </PACK>
    <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="0">
    <BOUNDS type="Node" left="2760" top="6255" width="100" height="100">
@@ -12,6 +12,8 @@
    <BOUNDS type="Window" left="14295" top="0" width="14505" height="10980">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="FileStream (DShow9)" nodename="FileStream (DShow9)" componentmode="Hidden" id="1">
@@ -253,15 +255,15 @@
    <LINK srcnodeid="15" srcpinname="Output" dstnodeid="29" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="31" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="5115" top="9000" width="795" height="240">
+   <BOUNDS type="Box" left="5115" top="8850" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5115" top="9000" width="0" height="0">
+   <BOUNDS type="Node" left="5115" top="8850" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="EX9 Out" dstnodeid="31" dstpinname="Input Node">
-   </LINK>
    <NODE systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="33">
    <BOUNDS type="Node" left="7665" top="5490" width="100" height="100">
    </BOUNDS>
@@ -361,5 +363,21 @@
    <LINK srcnodeid="36" srcpinname="Output" dstnodeid="44" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="44" srcpinname="Output" dstnodeid="34" dstpinname="Alpha">
+   </LINK>
+   <NODE systemname="DX9Texture (EX9.Texture)" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden" id="45">
+   <BOUNDS type="Node" left="5100" top="8235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="720">
+   </PIN>
+   <PIN pinname="Height" slicecount="1" values="480">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="EX9 Out" dstnodeid="45" dstpinname="Source">
+   </LINK>
+   <LINK srcnodeid="45" srcpinname="Texture Out" dstnodeid="31" dstpinname="Input Node">
    </LINK>
    </PATCH>

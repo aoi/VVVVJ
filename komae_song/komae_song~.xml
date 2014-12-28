@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\komae_song\komae_song.v4p" systemname="komae_song" filename="C:\workspace\uminism\vvvv\komae_song\komae_song.v4p">
-   <BOUNDS type="Window" left="13140" top="2160" width="14400" height="16200">
+   <BOUNDS type="Window" left="17325" top="1650" width="14400" height="16200">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
    </PACK>
@@ -23,13 +23,15 @@
    <NODE systemname="FileStream (DShow9)" nodename="FileStream (DShow9)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="3540" top="1185" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="..\..\狛江\difinitive\komae_song_タイミング間違い.wmv">
+   <PIN pinname="Filename" slicecount="1" values="..\..\狛江\狛江タイミング調整2_AME\komae_song_ライブ音源.wmv">
    </PIN>
    <PIN pinname="Video" visible="1">
    </PIN>
    <PIN pinname="Play" visible="1">
    </PIN>
    <PIN pinname="Do Seek" visible="1">
+   </PIN>
+   <PIN pinname="Seek Time" slicecount="1" values="47.4">
    </PIN>
    </NODE>
    <NODE systemname="VideoTexture (EX9.Texture VMR9)" nodename="VideoTexture (EX9.Texture VMR9)" componentmode="Hidden" id="2">
@@ -94,10 +96,10 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 2">
    </LINK>
-   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="7">
-   <BOUNDS type="Node" left="8010" top="5205" width="100" height="100">
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="3705" top="4335" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8010" top="5205" width="2400" height="1800">
+   <BOUNDS type="Box" left="3705" top="4335" width="2400" height="1800">
    </BOUNDS>
    <BOUNDS type="Window" left="18075" top="645" width="12975" height="10665">
    </BOUNDS>
@@ -149,25 +151,13 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Play">
    </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="12" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="9645" top="8025" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="9645" top="8025" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
-   </PIN>
-   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Bin Size" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="13">
    <BOUNDS type="Node" left="7305" top="1095" width="100" height="100">
    </BOUNDS>
@@ -187,7 +177,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4965" top="345" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="0" visible="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -234,122 +224,42 @@
    </LINK>
    <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Enabled">
    </LINK>
-   <NODE systemname="FileStream (DShow9)" nodename="FileStream (DShow9)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="8880" top="1200" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="..\..\狛江\difinitive\komae_song_タイミング間違い.wmv">
-   </PIN>
-   <PIN pinname="Video" visible="1">
-   </PIN>
-   <PIN pinname="Play" visible="1">
-   </PIN>
-   <PIN pinname="Do Seek" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Loop End Time" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Seek Time" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Speed" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="18">
-   <BOUNDS type="Node" left="8895" top="375" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="8895" top="375" width="510" height="450">
-   </BOUNDS>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Chage To Scene3|">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Play">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="10305" top="360" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="10305" top="360" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Bang">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Do Seek Scene3|">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="VideoTexture (EX9.Texture VMR9)" nodename="VideoTexture (EX9.Texture VMR9)" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="8865" top="1785" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Video" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="8865" top="2460" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Blend Mode" slicecount="1" values="| Blend|">
-   </PIN>
-   <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="21" srcpinname="Texture Out" dstnodeid="20" dstpinname="Texture">
-   </LINK>
-   <LINK srcnodeid="19" srcpinname="Video" dstnodeid="21" dstpinname="Video">
-   </LINK>
-   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="8895" top="3270" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer 1" visible="1">
-   </PIN>
-   <PIN pinname="Layer 2" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="6" srcpinname="Layer" dstnodeid="22" dstpinname="Layer 1">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Layer" dstnodeid="22" dstpinname="Layer 2">
-   </LINK>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Enabled">
    </LINK>
-   <NODE systemname="SetAlpha (Color)" nodename="SetAlpha (Color)" componentmode="Hidden" id="23">
-   <BOUNDS type="Node" left="10845" top="1725" width="100" height="100">
+   <LINK srcnodeid="6" srcpinname="Layer" dstnodeid="7" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="DX9Texture (EX9.Texture)" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="5145" top="5235" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Output" visible="1">
+   <PIN pinname="Source" visible="1">
    </PIN>
-   <PIN pinname="Alpha" slicecount="1" visible="1" values="0">
+   <PIN pinname="Width" slicecount="1" values="1000">
    </PIN>
-   <PIN pinname="Input" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Height" slicecount="1" values="1000">
    </PIN>
    </NODE>
-   <LINK srcnodeid="23" srcpinname="Output" dstnodeid="20" dstpinname="Color">
+   <LINK srcnodeid="7" srcpinname="EX9 Out" dstnodeid="24" dstpinname="Source">
    </LINK>
-   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Alpha">
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="25" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="5130" top="6645" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5130" top="6645" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Texture Out" dstnodeid="25" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Speed">
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="6105" top="300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="22" srcpinname="Layer" dstnodeid="7" dstpinname="Layers">
-   </LINK>
-   <LINK srcnodeid="7" srcpinname="X" dstnodeid="12" dstpinname="Bin Size">
+   <LINK srcnodeid="26" srcpinname="OnChange" dstnodeid="14" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

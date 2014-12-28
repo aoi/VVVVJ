@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
-   <PATCH nodename="C:\workspace\uminism\vvvv\sea\dx11Todx9.v4p" systemname="DX11intoDx9_sample" filename="C:\Users\Junki Yoshioka\Desktop\DX11intoDx9_sample.v4p" scrollx="252" scrolly="378">
-   <BOUNDS type="Window" left="-18960" top="5310" width="6465" height="9450">
+   <PATCH nodename="C:\workspace\uminism\vvvv\sea\dx11Todx9.v4p" systemname="DX11intoDx9_sample" filename="C:\Users\Junki Yoshioka\Desktop\DX11intoDx9_sample.v4p" scrollx="255" scrolly="375">
+   <BOUNDS type="Window" left="16335" top="4680" width="6465" height="9450">
    </BOUNDS>
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="10">
    <BOUNDS type="Node" left="2369" top="2184" width="100" height="100">
@@ -37,6 +37,8 @@
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|0.25434,0.25434,0.25434,1.00000|">
    </PIN>
+   <PIN pinname="Texture SizeXY" slicecount="2" values="720,480">
+   </PIN>
    </NODE>
    <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="7">
    <BOUNDS type="Node" left="1753" top="6058" width="100" height="100">
@@ -48,22 +50,20 @@
    <PIN pinname="Transform" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="6">
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="6">
    <BOUNDS type="Node" left="1753" top="6628" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="1753" top="6628" width="2400" height="1800">
    </BOUNDS>
    <BOUNDS type="Window" left="-11550" top="8700" width="6225" height="5070">
    </BOUNDS>
-   <PIN pinname="Layers" visible="1">
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="DX9">
    </PIN>
    <PIN pinname="EX9 Out" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="6" dstpinname="Layers">
-   </LINK>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="2098" top="4198" width="100" height="100">
    </BOUNDS>
@@ -104,12 +104,12 @@
    </NODE>
    <LINK srcnodeid="9" srcpinname="Transform Out" dstnodeid="7" dstpinname="Transform">
    </LINK>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="14">
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="Hidden" id="14">
    <BOUNDS type="Node" left="2533" top="3688" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="2533" top="3688" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="-12000" top="3465" width="6225" height="5070">
+   <BOUNDS type="Window" left="11100" top="5055" width="6225" height="5070">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
@@ -166,8 +166,6 @@
    </LINK>
    <PACK Name="addonpack" Version="33.0.0">
    </PACK>
-   <LINK srcnodeid="10" srcpinname="Layer" dstnodeid="8" dstpinname="Layer">
-   </LINK>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="60">
    <BOUNDS type="Node" left="2546" top="1627" width="100" height="100">
    </BOUNDS>
@@ -217,5 +215,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="64" srcpinname="Texture Out" dstnodeid="65" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="6" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Layer" dstnodeid="8" dstpinname="Layer">
    </LINK>
    </PATCH>
