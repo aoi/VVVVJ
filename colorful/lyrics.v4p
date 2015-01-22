@@ -1,0 +1,2317 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
+   <PATCH nodename="C:\workspace\uminism\vvvv\colorful\lyrics.v4p" systemname="lyrics" filename="C:\workspace\uminism\vvvv\colorful\lyrics.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="18930" top="3960" width="9870" height="11745">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.0.0">
+   </PACK>
+   <NODE systemname="FileStream (DShow9)" nodename="FileStream (DShow9)" componentmode="Hidden" id="89">
+   <BOUNDS type="Node" left="29085" top="1575" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" slicecount="1" values="..\lalala\difinitive\lalala.avi">
+   </PIN>
+   <PIN pinname="Video" visible="1">
+   </PIN>
+   <PIN pinname="Do Seek" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="lalala">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="88" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="29100" top="45" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="29100" top="45" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Play">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="88" srcpinname="Y Output Value" dstnodeid="89" dstpinname="Play">
+   </LINK>
+   <NODE systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="87">
+   <BOUNDS type="Node" left="29535" top="3480" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Blend Mode" slicecount="1" values="| Blend|">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="VideoTexture (EX9.Texture VMR9 YUVMixingMode)" nodename="VideoTexture (EX9.Texture VMR9 YUVMixingMode)" componentmode="Hidden" id="86">
+   <BOUNDS type="Node" left="29520" top="2355" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Video" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Texture Size Mode" slicecount="1" values="Pow2Stretched">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="89" srcpinname="Video" dstnodeid="86" dstpinname="Video">
+   </LINK>
+   <NODE systemname="SetAlpha (Color)" nodename="SetAlpha (Color)" componentmode="Hidden" id="85">
+   <BOUNDS type="Node" left="30180" top="2940" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="85" srcpinname="Output" dstnodeid="87" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Texture Out" dstnodeid="87" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="Decay (Animation)" nodename="Decay (Animation)" componentmode="Hidden" id="84">
+   <BOUNDS type="Node" left="30825" top="1560" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Attack" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Decay" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="83" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="30840" top="945" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="30840" top="945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Show Hide|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="83" srcpinname="Y Output Value" dstnodeid="84" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="82" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="29820" top="945" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="29820" top="945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Do Seek|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Y Output Value" dstnodeid="89" dstpinname="Do Seek">
+   </LINK>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="90">
+   <BOUNDS type="Node" left="29310" top="4350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="285">
+   <BOUNDS type="Node" left="7065" top="10650" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7065" top="10650" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="18540" top="1605" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="DX9Texture (EX9.Texture)" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden" id="284">
+   <BOUNDS type="Node" left="8505" top="11130" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="1000">
+   </PIN>
+   <PIN pinname="Height" slicecount="1" values="1000">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="285" srcpinname="EX9 Out" dstnodeid="284" dstpinname="Source">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="280" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="765" top="885" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="765" top="885" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="rain">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="279">
+   <BOUNDS type="Node" left="1980" top="1410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="278" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="885" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="885" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="5" values=",,,,">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="276" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="150" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="150" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="5" values=",,,,">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="274" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="765" top="165" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="765" top="165" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="true">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="273">
+   <BOUNDS type="Node" left="1965" top="2145" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="279" srcpinname="Layer" dstnodeid="273" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="271" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="765" top="1620" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="765" top="1620" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="true">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="270" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="1620" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="1620" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="5" values=",,,,">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="268" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="765" top="2355" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="765" top="2355" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="rain">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="267" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="2355" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="2355" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="5" values=",,,,">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="266">
+   <BOUNDS type="Node" left="1965" top="2880" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="273" srcpinname="Layer" dstnodeid="266" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="264" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="765" top="3090" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="765" top="3090" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="光を">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="263" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="3090" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="3090" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="5" values=",,,,">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="262">
+   <BOUNDS type="Node" left="1965" top="3615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="266" srcpinname="Layer" dstnodeid="262" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="260" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="765" top="3825" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="765" top="3825" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="知らない">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="259" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="3825" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="3825" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="5" values=",,,,">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="258">
+   <BOUNDS type="Node" left="1965" top="4350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="262" srcpinname="Layer" dstnodeid="258" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="256" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="765" top="4560" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="765" top="4560" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="雨に">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="255" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="4560" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="4560" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="254">
+   <BOUNDS type="Node" left="1965" top="5085" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="258" srcpinname="Layer" dstnodeid="254" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="252" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="765" top="5295" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="765" top="5295" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="雨に">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="251" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="5295" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="5295" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="250">
+   <BOUNDS type="Node" left="1965" top="5820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="254" srcpinname="Layer" dstnodeid="250" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="248" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="765" top="6030" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="765" top="6030" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="打たれて">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="247" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="6030" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="6030" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="246">
+   <BOUNDS type="Node" left="1965" top="6555" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="250" srcpinname="Layer" dstnodeid="246" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="244" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="765" top="6765" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="765" top="6765" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="いたい">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="243" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="6765" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="6765" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="242">
+   <BOUNDS type="Node" left="1965" top="7290" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="246" srcpinname="Layer" dstnodeid="242" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="240" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3315" top="885" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="885" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="愛の">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="239">
+   <BOUNDS type="Node" left="4530" top="1410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="238" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2685" top="885" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2685" top="885" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="236" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2685" top="150" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2685" top="150" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="235" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3315" top="165" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="165" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="ゆれる">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="234">
+   <BOUNDS type="Node" left="4515" top="2145" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="239" srcpinname="Layer" dstnodeid="234" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="232" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3315" top="1620" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="1620" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="|I know|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="231" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2685" top="1620" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2685" top="1620" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="229" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3315" top="2355" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="2355" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="雨を">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="228" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2685" top="2355" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2685" top="2355" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="227">
+   <BOUNDS type="Node" left="4515" top="2880" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="234" srcpinname="Layer" dstnodeid="227" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="225" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3315" top="3090" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="3090" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="降らせて">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="224" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2685" top="3090" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2685" top="3090" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="223">
+   <BOUNDS type="Node" left="4515" top="3615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="227" srcpinname="Layer" dstnodeid="223" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="221" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3315" top="3825" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="3825" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="いて...">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="220" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2685" top="3825" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2685" top="3825" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="219">
+   <BOUNDS type="Node" left="4515" top="4350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="223" srcpinname="Layer" dstnodeid="219" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="217" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3315" top="4560" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="4560" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="キミが">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="216" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2685" top="4560" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2685" top="4560" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="215">
+   <BOUNDS type="Node" left="4515" top="5085" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="219" srcpinname="Layer" dstnodeid="215" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="213" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3315" top="5295" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="5295" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="眠る">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="212" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2685" top="5295" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2685" top="5295" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="211">
+   <BOUNDS type="Node" left="4515" top="5820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="215" srcpinname="Layer" dstnodeid="211" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="209" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3315" top="6030" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="6030" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="ソラへ">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="208" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2685" top="6030" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2685" top="6030" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="207">
+   <BOUNDS type="Node" left="4515" top="6555" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="211" srcpinname="Layer" dstnodeid="207" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="205" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3315" top="6765" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="6765" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="浮遊">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="204" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2685" top="6765" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2685" top="6765" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="203">
+   <BOUNDS type="Node" left="4515" top="7290" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="207" srcpinname="Layer" dstnodeid="203" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="202">
+   <BOUNDS type="Node" left="4530" top="465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="202" srcpinname="Layer" dstnodeid="239" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="200" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3315" top="7500" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="7500" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="浮遊">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="199" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2685" top="7500" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2685" top="7500" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="198">
+   <BOUNDS type="Node" left="4515" top="8025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="203" srcpinname="Layer" dstnodeid="198" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="196" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="885" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="885" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="レイン">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="195">
+   <BOUNDS type="Node" left="7080" top="1410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="194" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="885" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="885" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="192" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="150" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="150" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="191" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="165" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="165" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="カラフル">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="190">
+   <BOUNDS type="Node" left="7065" top="2145" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="195" srcpinname="Layer" dstnodeid="190" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="188" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="1620" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="1620" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="今は">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="187" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="1620" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="1620" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="185" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="2355" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="2355" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="いたいの">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="184" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="2355" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="2355" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="183">
+   <BOUNDS type="Node" left="7065" top="2880" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="190" srcpinname="Layer" dstnodeid="183" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="181" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="3090" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="3090" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="ここに">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="180" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="3090" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="3090" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="179">
+   <BOUNDS type="Node" left="7065" top="3615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="183" srcpinname="Layer" dstnodeid="179" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="177" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="3825" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="3825" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="居たい">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="176" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="3825" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="3825" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="175">
+   <BOUNDS type="Node" left="7065" top="4350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="179" srcpinname="Layer" dstnodeid="175" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="173" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="4560" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="4560" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="光を">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="172" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="4560" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="4560" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="171">
+   <BOUNDS type="Node" left="7065" top="5085" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="175" srcpinname="Layer" dstnodeid="171" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="169" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="5295" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="5295" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="知らない">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="168" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="5295" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="5295" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="167">
+   <BOUNDS type="Node" left="7065" top="5820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="171" srcpinname="Layer" dstnodeid="167" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="165" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="6030" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="6030" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="color">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="164" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="6030" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="6030" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="163">
+   <BOUNDS type="Node" left="7065" top="6555" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="167" srcpinname="Layer" dstnodeid="163" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="161" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="6765" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="6765" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="ここに">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="160" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="6765" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="6765" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="159">
+   <BOUNDS type="Node" left="7065" top="7290" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="163" srcpinname="Layer" dstnodeid="159" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="158">
+   <BOUNDS type="Node" left="7080" top="660" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="158" srcpinname="Layer" dstnodeid="195" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="156" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="7500" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="7500" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="居たい">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="155" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="7500" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="7500" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="154">
+   <BOUNDS type="Node" left="7065" top="8025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="159" srcpinname="Layer" dstnodeid="154" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="152" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="8235" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="8235" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="永遠の">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="151" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="8235" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="8235" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="150">
+   <BOUNDS type="Node" left="7065" top="8760" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="154" srcpinname="Layer" dstnodeid="150" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="148" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="8970" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="8970" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="Blue">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="147" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="8970" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="8970" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="146">
+   <BOUNDS type="Node" left="7065" top="9495" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="150" srcpinname="Layer" dstnodeid="146" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="144" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5865" top="9705" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="9705" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="浮遊">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="143" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5235" top="9705" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5235" top="9705" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="142">
+   <BOUNDS type="Node" left="7065" top="10230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="146" srcpinname="Layer" dstnodeid="142" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="198" srcpinname="Layer" dstnodeid="158" dstpinname="Layer 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="324" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="765" top="8220" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="765" top="8220" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="rain">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="323" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="8220" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="8220" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="5" values=",,,,">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="322" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="7485" width="585" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="7485" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="5" values=",,,,">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="321" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="765" top="7500" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="765" top="7500" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="true">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="328">
+   <BOUNDS type="Node" left="1965" top="8025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="329">
+   <BOUNDS type="Node" left="1965" top="8760" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="242" srcpinname="Layer" dstnodeid="328" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="328" srcpinname="Layer" dstnodeid="329" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="331" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="765" top="9240" width="465" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="765" top="9240" width="465" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="Ah...">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="88" srcpinname="Y Output Value" dstnodeid="83" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="329" srcpinname="Layer" dstnodeid="202" dstpinname="Layer 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="463" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="30945" top="2355" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="30945" top="2355" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="463" srcpinname="Y Output Value" dstnodeid="85" dstpinname="Alpha">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Output" dstnodeid="463" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="277">
+   <BOUNDS type="Node" left="765" top="465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="text">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="276" srcpinname="Y Output Value" dstnodeid="277" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="277" srcpinname="Layer" dstnodeid="279" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="274" srcpinname="Output String" dstnodeid="277" dstpinname="text">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="281">
+   <BOUNDS type="Node" left="765" top="1200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="280" srcpinname="Output String" dstnodeid="281" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="281" srcpinname="Layer" dstnodeid="279" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="278" srcpinname="Y Output Value" dstnodeid="281" dstpinname="start">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="272">
+   <BOUNDS type="Node" left="765" top="1935" width="1005" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="271" srcpinname="Output String" dstnodeid="272" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="270" srcpinname="Y Output Value" dstnodeid="272" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="272" srcpinname="Layer" dstnodeid="273" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="269">
+   <BOUNDS type="Node" left="765" top="2670" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="268" srcpinname="Output String" dstnodeid="269" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="267" srcpinname="Y Output Value" dstnodeid="269" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="269" srcpinname="Layer" dstnodeid="266" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="265">
+   <BOUNDS type="Node" left="765" top="3405" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="264" srcpinname="Output String" dstnodeid="265" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="263" srcpinname="Y Output Value" dstnodeid="265" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="265" srcpinname="Layer" dstnodeid="262" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="261">
+   <BOUNDS type="Node" left="765" top="4140" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="260" srcpinname="Output String" dstnodeid="261" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="259" srcpinname="Y Output Value" dstnodeid="261" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="261" srcpinname="Layer" dstnodeid="258" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="257">
+   <BOUNDS type="Node" left="765" top="4875" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="256" srcpinname="Output String" dstnodeid="257" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="255" srcpinname="Y Output Value" dstnodeid="257" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="257" srcpinname="Layer" dstnodeid="254" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="253">
+   <BOUNDS type="Node" left="765" top="5610" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="252" srcpinname="Output String" dstnodeid="253" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="251" srcpinname="Y Output Value" dstnodeid="253" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="253" srcpinname="Layer" dstnodeid="250" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="249">
+   <BOUNDS type="Node" left="765" top="6345" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="248" srcpinname="Output String" dstnodeid="249" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="247" srcpinname="Y Output Value" dstnodeid="249" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="249" srcpinname="Layer" dstnodeid="246" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="245">
+   <BOUNDS type="Node" left="765" top="7080" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="244" srcpinname="Output String" dstnodeid="245" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="243" srcpinname="Y Output Value" dstnodeid="245" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="245" srcpinname="Layer" dstnodeid="242" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="319">
+   <BOUNDS type="Node" left="765" top="7800" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="text">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="322" srcpinname="Y Output Value" dstnodeid="319" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="321" srcpinname="Output String" dstnodeid="319" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="319" srcpinname="Layer" dstnodeid="328" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="320">
+   <BOUNDS type="Node" left="765" top="8535" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="324" srcpinname="Output String" dstnodeid="320" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="323" srcpinname="Y Output Value" dstnodeid="320" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="320" srcpinname="Layer" dstnodeid="329" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="237">
+   <BOUNDS type="Node" left="3315" top="465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="text">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="236" srcpinname="Y Output Value" dstnodeid="237" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="235" srcpinname="Output String" dstnodeid="237" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="237" srcpinname="Layer" dstnodeid="202" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="241">
+   <BOUNDS type="Node" left="3315" top="1200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="240" srcpinname="Output String" dstnodeid="241" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="241" srcpinname="Layer" dstnodeid="239" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="238" srcpinname="Y Output Value" dstnodeid="241" dstpinname="start">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="233">
+   <BOUNDS type="Node" left="3315" top="1935" width="1005" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="232" srcpinname="Output String" dstnodeid="233" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="231" srcpinname="Y Output Value" dstnodeid="233" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="233" srcpinname="Layer" dstnodeid="234" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="230">
+   <BOUNDS type="Node" left="3315" top="2670" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="229" srcpinname="Output String" dstnodeid="230" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="228" srcpinname="Y Output Value" dstnodeid="230" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="230" srcpinname="Layer" dstnodeid="227" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="226">
+   <BOUNDS type="Node" left="3315" top="3405" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="225" srcpinname="Output String" dstnodeid="226" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="224" srcpinname="Y Output Value" dstnodeid="226" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="226" srcpinname="Layer" dstnodeid="223" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="222">
+   <BOUNDS type="Node" left="3315" top="4140" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="221" srcpinname="Output String" dstnodeid="222" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="220" srcpinname="Y Output Value" dstnodeid="222" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="222" srcpinname="Layer" dstnodeid="219" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="218">
+   <BOUNDS type="Node" left="3315" top="4875" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="217" srcpinname="Output String" dstnodeid="218" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="216" srcpinname="Y Output Value" dstnodeid="218" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="218" srcpinname="Layer" dstnodeid="215" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="214">
+   <BOUNDS type="Node" left="3315" top="5610" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="213" srcpinname="Output String" dstnodeid="214" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Y Output Value" dstnodeid="214" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="214" srcpinname="Layer" dstnodeid="211" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="210">
+   <BOUNDS type="Node" left="3315" top="6345" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="209" srcpinname="Output String" dstnodeid="210" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="208" srcpinname="Y Output Value" dstnodeid="210" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="210" srcpinname="Layer" dstnodeid="207" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="206">
+   <BOUNDS type="Node" left="3315" top="7080" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="205" srcpinname="Output String" dstnodeid="206" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="204" srcpinname="Y Output Value" dstnodeid="206" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="206" srcpinname="Layer" dstnodeid="203" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="201">
+   <BOUNDS type="Node" left="3315" top="7815" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="200" srcpinname="Output String" dstnodeid="201" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="199" srcpinname="Y Output Value" dstnodeid="201" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="201" srcpinname="Layer" dstnodeid="198" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="193">
+   <BOUNDS type="Node" left="5865" top="465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="text">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="10485" top="1980" width="9465" height="9690">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="192" srcpinname="Y Output Value" dstnodeid="193" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="191" srcpinname="Output String" dstnodeid="193" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="193" srcpinname="Layer" dstnodeid="158" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="197">
+   <BOUNDS type="Node" left="5865" top="1200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="196" srcpinname="Output String" dstnodeid="197" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="197" srcpinname="Layer" dstnodeid="195" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="194" srcpinname="Y Output Value" dstnodeid="197" dstpinname="start">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="189">
+   <BOUNDS type="Node" left="5865" top="1935" width="1005" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="188" srcpinname="Output String" dstnodeid="189" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Y Output Value" dstnodeid="189" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="189" srcpinname="Layer" dstnodeid="190" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="186">
+   <BOUNDS type="Node" left="5865" top="2670" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="185" srcpinname="Output String" dstnodeid="186" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="184" srcpinname="Y Output Value" dstnodeid="186" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="186" srcpinname="Layer" dstnodeid="183" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="182">
+   <BOUNDS type="Node" left="5865" top="3405" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="181" srcpinname="Output String" dstnodeid="182" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="180" srcpinname="Y Output Value" dstnodeid="182" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="182" srcpinname="Layer" dstnodeid="179" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="178">
+   <BOUNDS type="Node" left="5865" top="4140" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="177" srcpinname="Output String" dstnodeid="178" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="Y Output Value" dstnodeid="178" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="178" srcpinname="Layer" dstnodeid="175" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="174">
+   <BOUNDS type="Node" left="5865" top="4875" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="173" srcpinname="Output String" dstnodeid="174" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="172" srcpinname="Y Output Value" dstnodeid="174" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="174" srcpinname="Layer" dstnodeid="171" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="170">
+   <BOUNDS type="Node" left="5865" top="5610" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="169" srcpinname="Output String" dstnodeid="170" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="168" srcpinname="Y Output Value" dstnodeid="170" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="170" srcpinname="Layer" dstnodeid="167" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="166">
+   <BOUNDS type="Node" left="5865" top="6345" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="11775" top="0" width="9990" height="8985">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="165" srcpinname="Output String" dstnodeid="166" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Y Output Value" dstnodeid="166" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="166" srcpinname="Layer" dstnodeid="163" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="162">
+   <BOUNDS type="Node" left="5865" top="7080" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="161" srcpinname="Output String" dstnodeid="162" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="160" srcpinname="Y Output Value" dstnodeid="162" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="162" srcpinname="Layer" dstnodeid="159" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="157">
+   <BOUNDS type="Node" left="5865" top="7815" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="156" srcpinname="Output String" dstnodeid="157" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="155" srcpinname="Y Output Value" dstnodeid="157" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="157" srcpinname="Layer" dstnodeid="154" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="153">
+   <BOUNDS type="Node" left="5865" top="8550" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="152" srcpinname="Output String" dstnodeid="153" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="151" srcpinname="Y Output Value" dstnodeid="153" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="153" srcpinname="Layer" dstnodeid="150" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="149">
+   <BOUNDS type="Node" left="5865" top="9285" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="148" srcpinname="Output String" dstnodeid="149" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="147" srcpinname="Y Output Value" dstnodeid="149" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="149" srcpinname="Layer" dstnodeid="146" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="falling_text" filename="falling_text.v4p" nodename="falling_text.v4p" componentmode="Hidden" id="145">
+   <BOUNDS type="Node" left="5865" top="10020" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="9765" top="4470" width="9465" height="9690">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="144" srcpinname="Output String" dstnodeid="145" dstpinname="text">
+   </LINK>
+   <LINK srcnodeid="143" srcpinname="Y Output Value" dstnodeid="145" dstpinname="start">
+   </LINK>
+   <LINK srcnodeid="145" srcpinname="Layer" dstnodeid="142" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="142" srcpinname="Layer" dstnodeid="285" dstpinname="Layers">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="483" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="8520" top="12180" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8520" top="12180" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="284" srcpinname="Texture Out" dstnodeid="483" dstpinname="Input Node">
+   </LINK>
+   </PATCH>

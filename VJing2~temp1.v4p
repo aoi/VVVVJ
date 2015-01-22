@@ -9,7 +9,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6720" top="13980" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="19695" top="735" width="7875" height="6540">
+   <BOUNDS type="Window" left="32070" top="2025" width="7875" height="6540">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -79,12 +79,30 @@
    </PIN>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
+   <PIN pinname="Switch" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="8" srcpinname="Output" dstnodeid="10" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="32" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3900" top="13575" width="720" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3900" top="13575" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Switch">
    </LINK>
    <NODE systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="33">
    <BOUNDS type="Node" left="6720" top="13035" width="100" height="100">
@@ -333,7 +351,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3075" top="12615" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -567,6 +585,10 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="447" srcpinname="Input Value" dstnodeid="8" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="36" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Input 1">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="448" systemname="IOBox (String)">
    <BOUNDS type="Node" left="3030" top="11490" width="1650" height="270">
@@ -1518,30 +1540,52 @@
    </LINK>
    <LINK srcnodeid="528" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Fullscreen">
    </LINK>
+   <NODE systemname="OSC_controller" filename="OSC_controller.v4p" nodename="OSC_controller.v4p" componentmode="InAWindow" id="541">
+   <BOUNDS type="Node" left="11400" top="2700" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-13470" top="3135" width="11175" height="10995">
+   </BOUNDS>
+   <PIN pinname="Arguments" visible="1">
+   </PIN>
+   <PIN pinname="Page" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Row" visible="1">
+   </PIN>
+   <PIN pinname="Col" visible="1">
+   </PIN>
+   </NODE>
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="543">
    <BOUNDS type="Node" left="11400" top="3165" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input Value" visible="1">
    </PIN>
    <PIN pinname="Send String" slicecount="1" values="|OSC Arguments|">
    </PIN>
    </NODE>
+   <LINK srcnodeid="541" srcpinname="Arguments" dstnodeid="543" dstpinname="Input Value">
+   </LINK>
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="544">
    <BOUNDS type="Node" left="11715" top="3555" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input Value" visible="1">
    </PIN>
    <PIN pinname="Send String" slicecount="1" values="|OSC Page|">
    </PIN>
    </NODE>
+   <LINK srcnodeid="541" srcpinname="Page" dstnodeid="544" dstpinname="Input Value">
+   </LINK>
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="545">
    <BOUNDS type="Node" left="12045" top="3945" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input Value" visible="1">
    </PIN>
    <PIN pinname="Send String" slicecount="1" values="|OSC Input|">
    </PIN>
    </NODE>
+   <LINK srcnodeid="541" srcpinname="Input" dstnodeid="545" dstpinname="Input Value">
+   </LINK>
    <LINK srcnodeid="513" srcpinname="Output" dstnodeid="512" dstpinname="Enabled">
    </LINK>
    <LINK srcnodeid="513" srcpinname="Output" dstnodeid="512" dstpinname="Evaluate">
@@ -1555,7 +1599,7 @@
    </PIN>
    <PIN pinname="Select Left Right" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="-28800" top="0" width="11100" height="12915">
+   <BOUNDS type="Window" left="-11805" top="2370" width="11235" height="12630">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="546" srcpinname="Left Bank Name" dstnodeid="381" dstpinname="Input String">
@@ -1568,6 +1612,8 @@
    <PIN pinname="Send String" slicecount="1" values="|OSC Row|">
    </PIN>
    </NODE>
+   <LINK srcnodeid="541" srcpinname="Row" dstnodeid="547" dstpinname="Input Value">
+   </LINK>
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="548">
    <BOUNDS type="Node" left="14145" top="3165" width="100" height="100">
    </BOUNDS>
@@ -1576,7 +1622,11 @@
    <PIN pinname="Send String" slicecount="1" values="|OSC Col|">
    </PIN>
    </NODE>
+   <LINK srcnodeid="541" srcpinname="Col" dstnodeid="548" dstpinname="Input Value">
+   </LINK>
    <LINK srcnodeid="546" srcpinname="Right Bank Name" dstnodeid="382" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="546" srcpinname="Select Left Right" dstnodeid="322" dstpinname="Y Input Value" hiddenwhenlocked="1">
    </LINK>
    <NODE systemname="VJingVideoTexture" filename="VJingVideoTexture.v4p" nodename="VJingVideoTexture.v4p" componentmode="Hidden" id="550">
    <BOUNDS type="Node" left="12285" top="8025" width="100" height="100">
@@ -1827,61 +1877,9 @@
    </PIN>
    </NODE>
    <NODE systemname="select_left_right" filename="select_left_right.v4p" nodename="select_left_right.v4p" componentmode="InAWindow" id="570">
-   <BOUNDS type="Node" left="4800" top="12135" width="100" height="100">
+   <BOUNDS type="Node" left="15375" top="2715" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="-10050" top="4065" width="9195" height="11880">
+   <BOUNDS type="Window" left="-28515" top="1785" width="7770" height="8370">
    </BOUNDS>
-   <PIN pinname="Left Right" visible="1">
-   </PIN>
    </NODE>
-   <NODE systemname="OSC_controller" filename="OSC_controller.v4p" nodename="OSC_controller.v4p" componentmode="InAWindow" id="571">
-   <BOUNDS type="Node" left="11400" top="2595" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Arguments" visible="1">
-   </PIN>
-   <PIN pinname="Page" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Row" visible="1">
-   </PIN>
-   <PIN pinname="Col" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="-14400" top="195" width="9930" height="15180">
-   </BOUNDS>
-   <PIN pinname="OSC String" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="571" srcpinname="Arguments" dstnodeid="543" dstpinname="Input Value">
-   </LINK>
-   <LINK srcnodeid="571" srcpinname="Page" dstnodeid="544" dstpinname="Input Value">
-   </LINK>
-   <LINK srcnodeid="571" srcpinname="Input" dstnodeid="545" dstpinname="Input Value">
-   </LINK>
-   <LINK srcnodeid="571" srcpinname="Row" dstnodeid="547" dstpinname="Input Value">
-   </LINK>
-   <LINK srcnodeid="571" srcpinname="Col" dstnodeid="548" dstpinname="Input Value">
-   </LINK>
-   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="572">
-   <BOUNDS type="Node" left="4395" top="2490" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Send String" slicecount="1" values="|OSC OUTGOING PORT|">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input Value" slicecount="1" values="9000">
-   </PIN>
-   </NODE>
-   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="573">
-   <BOUNDS type="Node" left="12960" top="3555" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   <PIN pinname="Send String" slicecount="1" values="|OSC String|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="571" srcpinname="OSC String" dstnodeid="573" dstpinname="Input Value">
-   </LINK>
-   <LINK srcnodeid="570" srcpinname="Left Right" dstnodeid="322" dstpinname="Y Input Value">
-   </LINK>
    </PATCH>
