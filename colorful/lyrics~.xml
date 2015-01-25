@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\colorful\lyrics.v4p" systemname="lyrics" filename="C:\workspace\uminism\vvvv\colorful\lyrics.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="18570" top="4185" width="9870" height="11745">
+   <BOUNDS type="Window" left="18930" top="3960" width="9870" height="11745">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.0.0">
    </PACK>

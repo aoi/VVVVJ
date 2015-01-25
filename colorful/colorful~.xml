@@ -114,14 +114,14 @@
    </LINK>
    <LINK srcnodeid="471" srcpinname="Layer" dstnodeid="469" dstpinname="Layers">
    </LINK>
-   <NODE systemname="lyrics" filename="lyrics.v4p" nodename="lyrics.v4p" componentmode="InAWindow" id="474">
+   <NODE systemname="lyrics" filename="lyrics.v4p" nodename="lyrics.v4p" componentmode="Hidden" id="474">
    <BOUNDS type="Node" left="3870" top="3300" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
    </PIN>
    <PIN pinname="Do Seek" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="18660" top="4140" width="9870" height="11745">
+   <BOUNDS type="Window" left="18930" top="3960" width="9870" height="11745">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="474" srcpinname="Texture" dstnodeid="283" dstpinname="Input">

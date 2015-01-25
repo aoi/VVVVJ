@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\workspace\uminism\vvvv\VJingVideoTexture.v4p" systemname="VJingVideoTexture" filename="C:\workspace\uminism\vvvv\VJingVideoTexture.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
+   <PATCH nodename="C:\workspace\uminism\vvvv\VJingVideoTexture.v4p" systemname="VJingVideoTexture" filename="C:\workspace\uminism\vvvv\VJingVideoTexture.v4p" scrollx="150" scrolly="-360">
    <NODE systemname="FileStream (DShow9)" nodename="FileStream (DShow9)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2520" top="1545" width="100" height="100">
    </BOUNDS>
@@ -15,7 +15,7 @@
    </PIN>
    <PIN pinname="Loop End Time" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Loop" slicecount="1" values="0">
+   <PIN pinname="Loop" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="VideoTexture (EX9.Texture VMR9)" nodename="VideoTexture (EX9.Texture VMR9)" componentmode="Hidden" id="1">
@@ -30,7 +30,7 @@
    </LINK>
    <BOUNDS type="Window" left="18390" top="5685" width="6900" height="4695">
    </BOUNDS>
-   <PACK Name="addonpack" Version="31.9.0">
+   <PACK Name="addonpack" Version="33.0.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="2" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1230" top="555" width="480" height="480">
@@ -57,7 +57,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3645" top="1110" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="..\狛江\difinitive\komae_song_タイミング間違ぁEwmv">
+   <PIN pinname="Input String" slicecount="1" values="..\lalala\difinitive\lalala_song_non_logo.wmv">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="file.avi">
    </PIN>
@@ -151,5 +151,25 @@
    <LINK srcnodeid="13" srcpinname="Output" dstnodeid="14" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="9" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2010" top="585" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2010" top="585" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Loop">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Loop">
    </LINK>
    </PATCH>

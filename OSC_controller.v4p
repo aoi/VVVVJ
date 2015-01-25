@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\OSC_controller.v4p" systemname="OSC_controller" filename="C:\Users\aoi\Downloads\OSC_controller.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="-14400" top="195" width="9930" height="15180">
+   <BOUNDS type="Window" left="-5865" top="0" width="5865" height="11190">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.0.0">
    </PACK>
@@ -51,9 +51,11 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Local Port" slicecount="1" values="8000">
+   <PIN pinname="Local Port" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Queue Count" visible="1">
+   </PIN>
+   <PIN pinname="Enable" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="AsRaw (String)" nodename="AsRaw (String)" componentmode="Hidden" id="29">
@@ -83,24 +85,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Arguments" dstnodeid="30" dstpinname="Input String">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="41" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="885" top="450" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="885" top="450" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="8000">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Port Incoming|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="41" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Local Port">
    </LINK>
    <NODE componentmode="InABox" id="61" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="0" left="2580" top="7095" type="Node" width="0">
@@ -380,92 +364,6 @@
    </LINK>
    <LINK srcnodeid="131" srcpinname="Count" dstnodeid="132" dstpinname="Input 2">
    </LINK>
-   <NODE componentmode="InABox" id="168" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="0" left="4785" top="1170" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="160" left="41775" top="21615" type="Window" width="215">
-   </BOUNDS>
-   <BOUNDS height="525" left="4785" top="1170" type="Box" width="2430">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="1" slicecount="2" values="LzEvbGVmdF9iYW5rLzEvMgAAAAA=,LzEvbGVmdF9iYW5rLzEvNQ==" encoded="1">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   </NODE>
-   <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="169">
-   <BOUNDS type="Node" left="4770" top="2400" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Intersperse" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="170" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="4980" top="1950" width="1590" height="270">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4980" top="1950" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="UnixPath">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="170" srcpinname="Output Enum" dstnodeid="169" dstpinname="Intersperse">
-   </LINK>
-   <LINK srcnodeid="168" srcpinname="Output String" dstnodeid="169" dstpinname="Input">
-   </LINK>
-   <NODE systemname="RegExpr (String)" nodename="RegExpr (String)" componentmode="Hidden" id="171">
-   <BOUNDS type="Node" left="8535" top="2430" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Regular Expression" slicecount="1" values="(\/1\/left_bank\/1\/2)">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Match 1" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="168" srcpinname="Output String" dstnodeid="171" dstpinname="Input">
-   </LINK>
-   <NODE systemname="AsRaw (String)" nodename="AsRaw (String)" componentmode="Hidden" id="172">
-   <BOUNDS type="Node" left="7620" top="2415" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="2" values="LzEvbGVmdF9iYW5rLzEvMgAAAAAsZgAAAAAAAA==,LzEvbGVmdF9iYW5rLzEvMwAAAAAsZgAAP4AAAA==" encoded="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="OSCDecoder (Network)" nodename="OSCDecoder (Network)" componentmode="Hidden" id="173">
-   <BOUNDS type="Node" left="7620" top="3015" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Arguments" visible="1">
-   </PIN>
-   <PIN pinname="Address" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="174" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="7260" top="3660" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="7260" top="3660" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="173" srcpinname="Arguments" dstnodeid="174" dstpinname="Input String">
-   </LINK>
-   <LINK srcnodeid="171" srcpinname="Match 1" dstnodeid="173" dstpinname="Address">
-   </LINK>
-   <LINK srcnodeid="172" srcpinname="Output" dstnodeid="173" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="115" srcpinname="Output" dstnodeid="29" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="160" srcpinname="Match 1" dstnodeid="157" dstpinname="Input">
@@ -521,9 +419,9 @@
    <LINK srcnodeid="184" srcpinname="Match 1" dstnodeid="165" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="185" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="690" top="3225" width="795" height="240">
+   <BOUNDS type="Box" left="540" top="3270" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="690" top="3225" width="0" height="0">
+   <BOUNDS type="Node" left="540" top="3270" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -537,5 +435,15 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="115" srcpinname="Output" dstnodeid="185" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="186">
+   <BOUNDS type="Node" left="870" top="450" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="|OSC INCOMING PORT|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="186" srcpinname="Input Value" dstnodeid="25" dstpinname="Local Port">
    </LINK>
    </PATCH>
