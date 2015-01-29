@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
-   <PATCH nodename="C:\workspace\uminism\vvvv\VJing2.v4p" systemname="VJing" filename="C:\workspace\uminism\vvvv\VJing.v4p" scrollx="30" scrolly="-360">
+   <PATCH nodename="C:\workspace\uminism\vvvv\VJing2.v4p" systemname="VJing" filename="C:\workspace\uminism\vvvv\VJing.v4p" scrollx="0" scrolly="-360">
    <BOUNDS type="Window" left="0" top="0" width="22185" height="15450">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.0.0">
@@ -959,7 +959,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="16260" top="960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="128" visible="1" values="5,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -995,7 +995,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="17160" top="960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="128" visible="1" values="6,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="6">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1178,20 +1178,6 @@
    </LINK>
    <LINK srcnodeid="512" srcpinname="Texture" dstnodeid="368" dstpinname="Input 4">
    </LINK>
-   <NODE systemname="VJingVideoTexture" filename="VJingVideoTexture.v4p" nodename="VJingVideoTexture.v4p" componentmode="Hidden" id="515">
-   <BOUNDS type="Node" left="16365" top="7815" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" visible="1" values="|..\..\..\Program Files (x86)\vvvv\vvvv_45beta33.1_x86\lib\assets\videos\Stallone_Constant_256bitrate_70Qty.wmv|">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="lalala">
-   </PIN>
-   <BOUNDS type="Window" left="18990" top="1485" width="6900" height="4695">
-   </BOUNDS>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="516" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="16380" top="7020" width="480" height="480">
    </BOUNDS>
@@ -1212,8 +1198,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Play">
    </PIN>
    </NODE>
-   <LINK srcnodeid="516" srcpinname="Y Output Value" dstnodeid="515" dstpinname="Play">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="517" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="16935" top="7020" width="480" height="480">
    </BOUNDS>
@@ -1234,8 +1218,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Do Seek|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="517" srcpinname="Y Output Value" dstnodeid="515" dstpinname="Do Seek">
-   </LINK>
    <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="518">
    <BOUNDS type="Node" left="17820" top="7470" width="100" height="100">
    </BOUNDS>
@@ -1247,8 +1229,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="421" srcpinname="Index" dstnodeid="518" dstpinname="Input 1" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="518" srcpinname="Output" dstnodeid="515" dstpinname="Evaluate">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="528" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="7515" top="13380" width="480" height="480">
@@ -1329,7 +1309,7 @@
    </PIN>
    <PIN pinname="Select Left Right" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="2145" top="3735" width="19770" height="7500">
+   <BOUNDS type="Window" left="6675" top="7860" width="19770" height="7500">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="546" srcpinname="Left Bank Name" dstnodeid="381" dstpinname="Input String">
@@ -1561,7 +1541,7 @@
    </PIN>
    <PIN pinname="Current Index" visible="1">
    </PIN>
-   <PIN pinname="Texture" visible="1">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="583" systemname="IOBox (String)">
@@ -1599,7 +1579,7 @@
    </PIN>
    <PIN pinname="Bank ID" slicecount="1" values="F">
    </PIN>
-   <PIN pinname="Texture" visible="1">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="lalala">
    </PIN>
@@ -1621,7 +1601,7 @@
    </PIN>
    <PIN pinname="BankIndex" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Texture" visible="1">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="421" srcpinname="Index" dstnodeid="586" dstpinname="Current Index" hiddenwhenlocked="1">
@@ -1649,6 +1629,26 @@
    <LINK srcnodeid="296" srcpinname="Output" dstnodeid="510" dstpinname="Evaluate">
    </LINK>
    <LINK srcnodeid="529" srcpinname="Y Output Value" dstnodeid="510" dstpinname="Change To Scene2">
+   </LINK>
+   <NODE systemname="VJingVideoTexture" filename="VJingVideoTexture.v4p" nodename="VJingVideoTexture.v4p" componentmode="Hidden" id="515">
+   <BOUNDS type="Node" left="16365" top="7815" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" slicecount="1" visible="1" values="|..\..\..\Program Files (x86)\vvvv\vvvv_45beta33.1_x86\lib\assets\videos\Stallone_Constant_256bitrate_70Qty.wmv|">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="lalala">
+   </PIN>
+   <BOUNDS type="Window" left="18990" top="1485" width="6900" height="4695">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="516" srcpinname="Y Output Value" dstnodeid="515" dstpinname="Play">
+   </LINK>
+   <LINK srcnodeid="517" srcpinname="Y Output Value" dstnodeid="515" dstpinname="Do Seek">
+   </LINK>
+   <LINK srcnodeid="518" srcpinname="Output" dstnodeid="515" dstpinname="Evaluate">
    </LINK>
    <LINK srcnodeid="515" srcpinname="Texture" dstnodeid="269" dstpinname="Input 6">
    </LINK>

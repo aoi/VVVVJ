@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
-   <PATCH nodename="C:\workspace\uminism\vvvv\VJingVideoTexture.v4p" systemname="VJingVideoTexture" filename="C:\workspace\uminism\vvvv\VJingVideoTexture.v4p" scrollx="150" scrolly="-360">
+   <PATCH nodename="C:\workspace\uminism\vvvv\VJingVideoTexture.v4p" systemname="VJingVideoTexture" filename="C:\workspace\uminism\vvvv\VJingVideoTexture.v4p" scrollx="105" scrolly="0">
    <NODE systemname="FileStream (DShow9)" nodename="FileStream (DShow9)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2520" top="1545" width="100" height="100">
    </BOUNDS>
@@ -28,7 +28,7 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Video" dstnodeid="1" dstpinname="Video">
    </LINK>
-   <BOUNDS type="Window" left="18390" top="5685" width="6900" height="4695">
+   <BOUNDS type="Window" left="13440" top="5490" width="6900" height="4695">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.0.0">
    </PACK>

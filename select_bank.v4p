@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\select_bank.v4p" systemname="select_bank" filename="C:\workspace\uminism\vvvv\select_bank.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="2145" top="3735" width="19770" height="7500">
+   <BOUNDS type="Window" left="6675" top="7860" width="19770" height="7500">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.0.0">
    </PACK>
@@ -541,7 +541,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2055" top="1800" width="3720" height="5440">
    </BOUNDS>
-   <BOUNDS type="Window" left="-19665" top="5190" width="4830" height="5940">
+   <BOUNDS type="Window" left="5385" top="5640" width="4830" height="5940">
    </BOUNDS>
    <PIN pinname="Address" visible="1" slicecount="1" values="/1/left_bank/1/4">
    </PIN>
@@ -583,7 +583,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4455" top="1800" width="3720" height="5440">
    </BOUNDS>
-   <BOUNDS type="Window" left="-19665" top="5190" width="4830" height="5940">
+   <BOUNDS type="Window" left="13065" top="3420" width="6525" height="6735">
    </BOUNDS>
    <PIN pinname="Address" visible="1" slicecount="1" values="/1/left_bank/1/6">
    </PIN>
