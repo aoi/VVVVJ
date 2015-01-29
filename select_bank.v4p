@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\select_bank.v4p" systemname="select_bank" filename="C:\workspace\uminism\vvvv\select_bank.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="-26730" top="1560" width="19770" height="7500">
+   <BOUNDS type="Window" left="2145" top="3735" width="19770" height="7500">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.0.0">
    </PACK>
@@ -307,7 +307,7 @@
    </PIN>
    <PIN pinname="Default Arguments" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Reset Arguments" visible="1">
+   <PIN pinname="Reset Arguments" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -327,7 +327,7 @@
    </PIN>
    <PIN pinname="Default Arguments" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Reset Arguments" visible="1">
+   <PIN pinname="Reset Arguments" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -347,7 +347,7 @@
    </PIN>
    <PIN pinname="Default Arguments" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Reset Arguments" visible="1">
+   <PIN pinname="Reset Arguments" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -367,7 +367,7 @@
    </PIN>
    <PIN pinname="Default Arguments" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Reset Arguments" visible="1">
+   <PIN pinname="Reset Arguments" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -387,7 +387,7 @@
    </PIN>
    <PIN pinname="Default Arguments" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Reset Arguments" visible="1">
+   <PIN pinname="Reset Arguments" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -407,7 +407,7 @@
    </PIN>
    <PIN pinname="Default Arguments" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Reset Arguments" visible="1">
+   <PIN pinname="Reset Arguments" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -427,7 +427,7 @@
    </PIN>
    <PIN pinname="Default Arguments" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Reset Arguments" visible="1">
+   <PIN pinname="Reset Arguments" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -481,17 +481,19 @@
    </BOUNDS>
    <BOUNDS type="Box" left="300" top="1800" width="3720" height="5440">
    </BOUNDS>
-   <BOUNDS type="Window" left="-19665" top="5190" width="4830" height="5940">
+   <BOUNDS type="Window" left="4455" top="4980" width="4830" height="5940">
    </BOUNDS>
    <PIN pinname="Address" visible="1" slicecount="1" values="/1/left_bank/1/1">
    </PIN>
-   <PIN pinname="Reset Arguments" visible="1">
+   <PIN pinname="Reset Arguments" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Default Arguments" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="On Receive" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="decode_osc" filename="decode_osc.v4p" nodename="decode_osc.v4p" componentmode="Hidden" id="212">

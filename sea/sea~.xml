@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
-   <PATCH nodename="C:\workspace\uminism\vvvv\sea\sea.v4p" filename="C:\workspace\uminism\vvvv\sea\sea.v4p" systemname="sea" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\workspace\uminism\vvvv\sea\sea.v4p" filename="C:\workspace\uminism\vvvv\sea\sea.v4p" systemname="sea" scrollx="0" scrolly="-360">
    <BOUNDS height="16215" left="11415" top="165" type="Window" width="16320">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.0.0">

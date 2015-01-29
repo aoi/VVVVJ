@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\VJing2.v4p" systemname="VJing" filename="C:\workspace\uminism\vvvv\VJing.v4p" scrollx="30" scrolly="-360">
-   <BOUNDS type="Window" left="0" top="0" width="22185" height="16200">
+   <BOUNDS type="Window" left="0" top="0" width="22185" height="15450">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.0.0">
    </PACK>
@@ -9,7 +9,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6720" top="13980" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="-8565" top="8745" width="7875" height="6540">
+   <BOUNDS type="Window" left="20925" top="0" width="7875" height="6540">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -579,7 +579,7 @@
    </BOUNDS>
    <PIN pinname="Default" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1087,7 +1087,7 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Texture" visible="1">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="498" hiddenwhenlocked="1">
@@ -1148,26 +1148,6 @@
    </LINK>
    <LINK srcnodeid="368" srcpinname="Output" dstnodeid="509" dstpinname="Texture">
    </LINK>
-   <NODE systemname="asano_tsuki" filename="asano_tsuki\asano_tsuki.v4p" nodename="asano_tsuki\asano_tsuki.v4p" componentmode="Hidden" id="510">
-   <BOUNDS type="Node" left="13335" top="7455" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Window" left="10710" top="1950" width="14400" height="16200">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Change To Scene2" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Do Seak" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Play" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="510" srcpinname="Texture" dstnodeid="269" dstpinname="Input 3">
-   </LINK>
-   <LINK srcnodeid="296" srcpinname="Output" dstnodeid="510" dstpinname="Evaluate">
-   </LINK>
    <NODE systemname="sea" filename="sea\sea.v4p" nodename="sea\sea.v4p" componentmode="Hidden" id="512">
    <BOUNDS type="Node" left="4800" top="7590" width="100" height="100">
    </BOUNDS>
@@ -1199,9 +1179,9 @@
    <LINK srcnodeid="512" srcpinname="Texture" dstnodeid="368" dstpinname="Input 4">
    </LINK>
    <NODE systemname="VJingVideoTexture" filename="VJingVideoTexture.v4p" nodename="VJingVideoTexture.v4p" componentmode="Hidden" id="515">
-   <BOUNDS type="Node" left="15360" top="7065" width="100" height="100">
+   <BOUNDS type="Node" left="16365" top="7815" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="..\lalala\difinitive\lalala_song_non_logo.wmv" visible="1">
+   <PIN pinname="Filename" slicecount="1" visible="1" values="|..\..\..\Program Files (x86)\vvvv\vvvv_45beta33.1_x86\lib\assets\videos\Stallone_Constant_256bitrate_70Qty.wmv|">
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
@@ -1209,11 +1189,13 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="lalala">
    </PIN>
+   <BOUNDS type="Window" left="18990" top="1485" width="6900" height="4695">
+   </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="516" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="15375" top="6270" width="480" height="480">
+   <BOUNDS type="Box" left="16380" top="7020" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="15375" top="6270" width="0" height="0">
+   <BOUNDS type="Node" left="16380" top="7020" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -1233,9 +1215,9 @@
    <LINK srcnodeid="516" srcpinname="Y Output Value" dstnodeid="515" dstpinname="Play">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="517" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="15930" top="6270" width="480" height="480">
+   <BOUNDS type="Box" left="16935" top="7020" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="15930" top="6270" width="0" height="0">
+   <BOUNDS type="Node" left="16935" top="7020" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -1255,13 +1237,13 @@
    <LINK srcnodeid="517" srcpinname="Y Output Value" dstnodeid="515" dstpinname="Do Seek">
    </LINK>
    <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="518">
-   <BOUNDS type="Node" left="16815" top="6720" width="100" height="100">
+   <BOUNDS type="Node" left="17820" top="7470" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="3">
+   <PIN pinname="Input 2" slicecount="1" values="5">
    </PIN>
    </NODE>
    <LINK srcnodeid="421" srcpinname="Index" dstnodeid="518" dstpinname="Input 1" hiddenwhenlocked="1">
@@ -1301,15 +1283,13 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Change Scene|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="529" srcpinname="Y Output Value" dstnodeid="510" dstpinname="Change To Scene2">
-   </LINK>
    <LINK srcnodeid="528" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Fullscreen">
    </LINK>
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="543">
@@ -1349,7 +1329,7 @@
    </PIN>
    <PIN pinname="Select Left Right" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="-26730" top="1560" width="19770" height="7500">
+   <BOUNDS type="Window" left="2145" top="3735" width="19770" height="7500">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="546" srcpinname="Left Bank Name" dstnodeid="381" dstpinname="Input String">
@@ -1566,8 +1546,6 @@
    </LINK>
    <LINK srcnodeid="454" srcpinname="Output" dstnodeid="269" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="454" srcpinname="Output" dstnodeid="269" dstpinname="Input 6">
-   </LINK>
    <LINK srcnodeid="454" srcpinname="Output" dstnodeid="269" dstpinname="Input 7">
    </LINK>
    <LINK srcnodeid="454" srcpinname="Output" dstnodeid="269" dstpinname="Input 8">
@@ -1649,5 +1627,29 @@
    <LINK srcnodeid="421" srcpinname="Index" dstnodeid="586" dstpinname="Current Index" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="586" srcpinname="Texture" dstnodeid="269" dstpinname="Input 5">
+   </LINK>
+   <NODE systemname="asano_tsuki" filename="asano_tsuki\asano_tsuki.v4p" nodename="asano_tsuki\asano_tsuki.v4p" componentmode="Hidden" id="510">
+   <BOUNDS type="Node" left="13335" top="7455" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5355" top="5820" width="8145" height="7575">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Change To Scene2" visible="1">
+   </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input">
+   </PIN>
+   <PIN pinname="Do Seak" visible="1">
+   </PIN>
+   <PIN pinname="Play">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="510" srcpinname="Texture" dstnodeid="269" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="296" srcpinname="Output" dstnodeid="510" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="529" srcpinname="Y Output Value" dstnodeid="510" dstpinname="Change To Scene2">
+   </LINK>
+   <LINK srcnodeid="515" srcpinname="Texture" dstnodeid="269" dstpinname="Input 6">
    </LINK>
    </PATCH>

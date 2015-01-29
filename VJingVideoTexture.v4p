@@ -57,7 +57,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3645" top="1110" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="..\lalala\difinitive\lalala_song_non_logo.wmv">
+   <PIN pinname="Input String" slicecount="1" values="|..\..\..\Program Files (x86)\vvvv\vvvv_45beta33.1_x86\lib\assets\videos\Stallone_Constant_256bitrate_70Qty.wmv|">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="file.avi">
    </PIN>
