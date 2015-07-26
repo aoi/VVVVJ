@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\VJingVideoTexture.v4p" systemname="VJingVideoTexture" filename="C:\workspace\uminism\vvvv\VJingVideoTexture.v4p" scrollx="105" scrolly="0">
    <NODE systemname="FileStream (DShow9)" nodename="FileStream (DShow9)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2520" top="1545" width="100" height="100">
@@ -17,6 +17,8 @@
    </PIN>
    <PIN pinname="Loop" slicecount="1" visible="1" values="0">
    </PIN>
+   <PIN pinname="Do Seek" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="VideoTexture (EX9.Texture VMR9)" nodename="VideoTexture (EX9.Texture VMR9)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2895" top="2775" width="100" height="100">
@@ -25,17 +27,19 @@
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
+   <PIN pinname="Texture Size Mode" slicecount="1" values="NonPow2">
+   </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Video" dstnodeid="1" dstpinname="Video">
    </LINK>
-   <BOUNDS type="Window" left="13440" top="5490" width="6900" height="4695">
+   <BOUNDS type="Window" left="13440" top="5490" width="9780" height="6930">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.0.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="2" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1230" top="555" width="480" height="480">
+   <BOUNDS type="Box" left="960" top="210" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="1230" top="555" width="0" height="0">
+   <BOUNDS type="Node" left="960" top="210" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -53,9 +57,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="3645" top="1110" width="2505" height="240">
+   <BOUNDS type="Box" left="5790" top="720" width="2505" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3645" top="1110" width="0" height="0">
+   <BOUNDS type="Node" left="5790" top="720" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" values="|..\..\..\Program Files (x86)\vvvv\vvvv_45beta33.1_x86\lib\assets\videos\Stallone_Constant_256bitrate_70Qty.wmv|">
    </PIN>
@@ -73,9 +77,9 @@
    <LINK srcnodeid="3" srcpinname="Output String" dstnodeid="0" dstpinname="Filename">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="4" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3180" top="285" width="480" height="480">
+   <BOUNDS type="Box" left="3645" top="150" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="3180" top="285" width="0" height="0">
+   <BOUNDS type="Node" left="3645" top="150" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -89,9 +93,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Do Seek|">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Do Seek">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="5" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="2895" top="3210" width="1890" height="270">
    </BOUNDS>
@@ -120,8 +124,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="9" srcpinname="Output 1" dstnodeid="10" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="10" srcpinname="Output" dstnodeid="0" dstpinname="Play">
@@ -153,9 +155,9 @@
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="9" dstpinname="Input 1">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2010" top="585" width="480" height="480">
+   <BOUNDS type="Box" left="2265" top="165" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="2010" top="585" width="0" height="0">
+   <BOUNDS type="Node" left="2265" top="165" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -169,7 +171,49 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Loop">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Loop">
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="3645" top="840" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="3645" top="840">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="0" dstpinname="Do Seek">
+   </LINK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="2265" top="855" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="2265" top="855">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="17" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Output" dstnodeid="0" dstpinname="Loop">
+   </LINK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="960" top="855" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="960" top="855">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="10" dstpinname="Input 1">
    </LINK>
    </PATCH>

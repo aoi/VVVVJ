@@ -86,16 +86,6 @@
    </NODE>
    <LINK srcnodeid="5" srcpinname="Output" dstnodeid="7" dstpinname="Y Input Value">
    </LINK>
-   <NODE id="8" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
-   <PIN pinname="Descriptive Name" slicecount="1" values="Spread">
-   </PIN>
-   <BOUNDS type="Box" left="795" top="500" width="750" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="795" top="500" width="750" height="240">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="0" dstpinname="Input 1">
-   </LINK>
    <NODE id="9" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Value">
    </PIN>
@@ -110,10 +100,24 @@
    </LINK>
    <LINK srcnodeid="2" srcpinname="Output" dstnodeid="4" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="1" dstpinname="Input">
-   </LINK>
    <BOUNDS type="Window" left="10845" top="7245" width="3825" height="5565">
    </BOUNDS>
-   <PACK Name="addonpack" Version="31.9.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="10">
+   <BOUNDS type="Node" left="630" top="615" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="630" top="615" width="1035" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="8" values="A,|S&cr;&lf;|,|D&cr;&lf;|,|F&cr;&lf;|,G,H,J,K">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Spread">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Output String" dstnodeid="0" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output String" dstnodeid="1" dstpinname="Input">
+   </LINK>
    </PATCH>
