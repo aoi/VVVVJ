@@ -125,7 +125,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4965" top="600" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="..\trilogy\ep3\ep3_AME\ep3.wmv">
+   <PIN pinname="Input String" slicecount="1" values="file10.wmv">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="image.jpg">
    </PIN>
@@ -237,7 +237,7 @@
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
-   <PIN pinname="Input 4" visible="1">
+   <PIN pinname="Input 4" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -319,7 +319,7 @@
    </PIN>
    <PIN pinname="Loop" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="13440" top="5490" width="9780" height="6930">
+   <BOUNDS type="Window" left="37170" top="6795" width="9780" height="6930">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="135" srcpinname="Output" dstnodeid="190" dstpinname="Filename">

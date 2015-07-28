@@ -13,11 +13,13 @@
    </PIN>
    <PIN pinname="Play" visible="1">
    </PIN>
-   <PIN pinname="Loop End Time" slicecount="1" values="0">
+   <PIN pinname="Loop End Time" slicecount="1" values="0" visible="1">
    </PIN>
    <PIN pinname="Loop" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Do Seek" visible="1">
+   </PIN>
+   <PIN pinname="Expose Graph to ROT" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="VideoTexture (EX9.Texture VMR9)" nodename="VideoTexture (EX9.Texture VMR9)" componentmode="Hidden" id="1">
@@ -32,7 +34,7 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Video" dstnodeid="1" dstpinname="Video">
    </LINK>
-   <BOUNDS type="Window" left="13440" top="5490" width="9780" height="6930">
+   <BOUNDS type="Window" left="29265" top="6765" width="9780" height="6930">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -215,5 +217,17 @@
    <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="18" srcpinname="Output" dstnodeid="10" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="3930" top="1545" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Duration" dstnodeid="19" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Output 1" dstnodeid="0" dstpinname="Loop End Time">
    </LINK>
    </PATCH>
