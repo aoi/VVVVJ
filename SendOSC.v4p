@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\workspace\uminism\vvvv\OSC_Outgoing.v4p" systemname="OSC_Outgoing" filename="C:\workspace\uminism\vvvv\OSC_Outgoing.v4p">
+   <PATCH nodename="C:\workspace\uminism\vvvv\SendOSC.v4p" systemname="SendOSC" filename="C:\workspace\uminism\vvvv\SendOSC.v4p">
    <NODE systemname="OSCEncoder (Network)" nodename="OSCEncoder (Network)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1500" top="2655" width="100" height="100">
    </BOUNDS>
@@ -65,7 +65,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1515" top="1515" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="2" values="/1/select_left,/1/select_right">
+   <PIN pinname="Input String" slicecount="1" values="/1/left_bank/1/1">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -81,7 +81,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3195" top="1500" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="0.0000">
+   <PIN pinname="Input String" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -122,8 +122,8 @@
    </LINK>
    <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Remote Port">
    </LINK>
-   <BOUNDS type="Window" left="-6765" top="5355" width="4695" height="6210">
+   <BOUNDS type="Window" left="12135" top="3105" width="4695" height="6210">
    </BOUNDS>
-   <PACK Name="addonpack" Version="31.9.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    </PATCH>

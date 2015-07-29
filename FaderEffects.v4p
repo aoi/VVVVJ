@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\FaderEffects.v4p" systemname="FaderEffects" filename="C:\workspace\uminism\vvvv\FaderEffects.v4p">
-   <BOUNDS type="Window" left="40800" top="1230" width="15765" height="13185">
+   <BOUNDS type="Window" left="13275" top="1545" width="15765" height="13185">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -733,6 +733,8 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Default" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="48" srcpinname="Output" dstnodeid="104" dstpinname="Input">
    </LINK>
@@ -1012,4 +1014,28 @@
    </LINK>
    <LINK srcnodeid="118" srcpinname="Output" dstnodeid="103" dstpinname="Texture In 6">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="120" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2145" top="9630" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2145" top="9630" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Effects Index|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="Output" dstnodeid="120" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="121">
+   <BOUNDS type="Node" left="6645" top="9645" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6645" top="9645" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="6" values="Mix,Wave,Bood,Morph,Blinds,Ripple">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Effects List|">
+   </PIN>
+   </NODE>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\workspace\uminism\vvvv\decode_osc.v4p" scrollx="0" scrolly="0" systemname="decode_osc" filename="C:\workspace\uminism\vvvv\decode_osc.v4p">
+   <PATCH nodename="C:\workspace\uminism\vvvv\DecodeOSC.v4p" scrollx="0" scrolly="0" systemname="DecodeOSC" filename="C:\workspace\uminism\vvvv\DecodeOSC.v4p">
    <NODE systemname="OSCDecoder (Network)" nodename="OSCDecoder (Network)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1530" top="1500" width="100" height="100">
    </BOUNDS>
@@ -78,7 +78,7 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Arguments" dstnodeid="3" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="31635" top="6585" width="5910" height="7095">
+   <BOUNDS type="Window" left="5580" top="3480" width="5565" height="7125">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -125,7 +125,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3345" top="2310" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="1">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>

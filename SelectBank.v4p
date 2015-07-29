@@ -1,10 +1,10 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\workspace\uminism\vvvv\select_bank.v4p" systemname="select_bank" filename="C:\workspace\uminism\vvvv\select_bank.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="29235" top="180" width="26715" height="14925">
+   <PATCH nodename="C:\workspace\uminism\vvvv\SelectBank.v4p" systemname="SelectBank" filename="C:\workspace\uminism\vvvv\SelectBank.v4p" scrollx="0" scrolly="-360">
+   <BOUNDS type="Window" left="945" top="150" width="26715" height="14925">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <NODE systemname="OSC_Outgoing" filename="OSC_Outgoing.v4p" nodename="OSC_Outgoing.v4p" componentmode="Hidden" id="49" hiddenwhenlocked="1">
+   <NODE systemname="SendOSC" filename="SendOSC.v4p" nodename="SendOSC.v4p" componentmode="Hidden" id="49" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="300" top="3270" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="-18060" top="9075" width="4695" height="6210">
@@ -28,7 +28,7 @@
    <PIN pinname="Simulate" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="OSC_Outgoing" filename="OSC_Outgoing.v4p" nodename="OSC_Outgoing.v4p" componentmode="Hidden" id="54" hiddenwhenlocked="1">
+   <NODE systemname="SendOSC" filename="SendOSC.v4p" nodename="SendOSC.v4p" componentmode="Hidden" id="54" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="1680" top="3270" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="-18060" top="9075" width="4695" height="6210">

@@ -1,0 +1,213 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\workspace\uminism\vvvv\AudioInput.v4p" systemname="AudioInput" filename="C:\workspace\uminism\vvvv\AudioInput.v4p">
+   <BOUNDS type="Window" left="12210" top="1590" width="9615" height="5775">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="585" top="345" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="585" top="345" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="2" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="5925" top="195" width="2070" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5925" top="195" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="|内蔵マイク アレイ (IDT High Definition Audio CODEC)|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="AudioDriver">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2010" top="390" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2010" top="390" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|FFT Gain|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="1305" top="1665" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="|FFT BassOut|">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="1485" top="2115" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="|FFT LoMidOut|">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="1680" top="2595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="|FFT HiMidOut|">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="1875" top="3075" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="|FFT HighOut|">
+   </PIN>
+   </NODE>
+   <NODE systemname="BeatDetector (Value)" filename="%VVVV%\lib\nodes\modules\Value\BeatDetector (Value).v4p" nodename="BeatDetector (Value)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="4950" top="2850" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="BangOut" visible="1">
+   </PIN>
+   <PIN pinname="DecayOut" visible="1">
+   </PIN>
+   <PIN pinname="EnergyOut" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AudioIn (DShow9)" nodename="AudioIn (DShow9)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="4965" top="1755" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Driver" visible="1">
+   </PIN>
+   <PIN pinname="Audio" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Buffer Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Bit Depth" slicecount="1" values="16Bit">
+   </PIN>
+   <PIN pinname="Buffer Size" slicecount="1" values="512">
+   </PIN>
+   <PIN pinname="Channel Mode" slicecount="1" values="Monaural">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output Enum" dstnodeid="10" dstpinname="Driver">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="RMS (DShow9)" nodename="RMS (DShow9)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="4965" top="2295" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Audio" visible="1">
+   </PIN>
+   <PIN pinname="RMS" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Audio" dstnodeid="11" dstpinname="Audio">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="RMS" dstnodeid="9" dstpinname="Input">
+   </LINK>
+   <NODE systemname="FFT (DShow9 4Channels)" filename="%VVVV%\lib\nodes\modules\DShow9\FFT (DShow9 4Channels).v4p" nodename="FFT (DShow9 4Channels)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="1155" top="1125" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="BassOut" visible="1">
+   </PIN>
+   <PIN pinname="LoMidOut" visible="1">
+   </PIN>
+   <PIN pinname="HiMidOut" visible="1">
+   </PIN>
+   <PIN pinname="HighOut" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Gain" visible="1">
+   </PIN>
+   <PIN pinname="AudioDriver" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="BassOut" dstnodeid="4" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="LoMidOut" dstnodeid="5" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="HiMidOut" dstnodeid="6" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="HighOut" dstnodeid="7" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Gain">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output Enum" dstnodeid="12" dstpinname="AudioDriver">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5220" top="975" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5220" top="975" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|BeatDetector Gain|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="9" dstpinname="Gain">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="4935" top="3495" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="|BeatDetector BangOut|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="BangOut" dstnodeid="16" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="5520" top="4035" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="|BeatDetector DecayOut|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="DecayOut" dstnodeid="17" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="6105" top="4575" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="|BeatDetector EnergyOut|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="EnergyOut" dstnodeid="18" dstpinname="Input Value">
+   </LINK>
+   </PATCH>

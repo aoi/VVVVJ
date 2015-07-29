@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\workspace\uminism\vvvv\switch_bank.v4p" systemname="switch_bank" filename="C:\workspace\uminism\vvvv\switch_bank.v4p">
-   <BOUNDS type="Window" left="42195" top="5640" width="8835" height="4185">
+   <PATCH nodename="C:\workspace\uminism\vvvv\SwitchBank.v4p" systemname="SwitchBank" filename="C:\workspace\uminism\vvvv\SwitchBank.v4p">
+   <BOUNDS type="Window" left="13065" top="3105" width="8835" height="4185">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
