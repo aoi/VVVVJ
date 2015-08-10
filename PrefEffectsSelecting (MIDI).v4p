@@ -1,0 +1,287 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\workspace\uminism\vvvv\PrefEffectsSelecting (MIDI).v4p" systemname="PrefEffectsSelecting (MIDI)" filename="C:\Users\eto.satoshi\Dropbox\PrefEffectsSelecting (MIDI).v4p">
+   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="0" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="6060" top="750" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" slicecount="1" values="|MIDI Note Number|">
+   </PIN>
+   <PIN pinname="Receive" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="1" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="4830" top="750" width="600" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4830" top="750" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|0 Note No.|">
+   </PIN>
+   </NODE>
+   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="2" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="6060" top="1050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" slicecount="1" values="|MIDI Note Number|">
+   </PIN>
+   <PIN pinname="Receive" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="3" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="4860" top="1050" width="600" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4860" top="1050" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|1 Note No.|">
+   </PIN>
+   </NODE>
+   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="4" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="6075" top="1350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" slicecount="1" values="|MIDI Note Number|">
+   </PIN>
+   <PIN pinname="Receive" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="5" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="4875" top="1350" width="600" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4875" top="1350" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="2">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|2 Note No.|">
+   </PIN>
+   </NODE>
+   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="6" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="6090" top="1650" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" slicecount="1" values="|MIDI Note Number|">
+   </PIN>
+   <PIN pinname="Receive" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="7" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="4890" top="1650" width="600" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4890" top="1650" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="3">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|3 Note No.|">
+   </PIN>
+   </NODE>
+   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="8" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="6090" top="1950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" slicecount="1" values="|MIDI Note Number|">
+   </PIN>
+   <PIN pinname="Receive" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="9" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="4905" top="1950" width="600" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4905" top="1950" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="4">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|4 Note No.|">
+   </PIN>
+   </NODE>
+   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="10" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="6090" top="2250" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" slicecount="1" values="|MIDI Note Number|">
+   </PIN>
+   <PIN pinname="Receive" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="11" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="4935" top="2250" width="600" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4935" top="2250" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="5">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|5 Note No.|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Enum2Ord (Enumerations)" nodename="Enum2Ord (Enumerations)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="6585" top="750" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Enum2Ord (Enumerations)" nodename="Enum2Ord (Enumerations)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="6585" top="1050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Enum2Ord (Enumerations)" nodename="Enum2Ord (Enumerations)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="6585" top="1350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Enum2Ord (Enumerations)" nodename="Enum2Ord (Enumerations)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="6585" top="1650" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Enum2Ord (Enumerations)" nodename="Enum2Ord (Enumerations)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="6585" top="1950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Enum2Ord (Enumerations)" nodename="Enum2Ord (Enumerations)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="6585" top="2250" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="7695" top="1680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" visible="1">
+   </PIN>
+   <PIN pinname="Input 5" visible="1">
+   </PIN>
+   <PIN pinname="Input 6" visible="1">
+   </PIN>
+   <PIN pinname="Input 7" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 8" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="29" hiddenwhenlocked="0">
+   <BOUNDS type="Node" left="1560" top="750" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" slicecount="1" values="|MIDI Channel Number|">
+   </PIN>
+   <PIN pinname="Receive" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="30" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="330" top="750" width="600" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="330" top="750" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Channel No.|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Enum2Ord (Enumerations)" nodename="Enum2Ord (Enumerations)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="2085" top="750" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="30" srcpinname="Output Enum" dstnodeid="29" dstpinname="Receive">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Output Enum" dstnodeid="31" dstpinname="Enum">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output Enum" dstnodeid="0" dstpinname="Receive">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output Enum" dstnodeid="2" dstpinname="Receive">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output Enum" dstnodeid="4" dstpinname="Receive">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output Enum" dstnodeid="6" dstpinname="Receive">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output Enum" dstnodeid="8" dstpinname="Receive">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Enum" dstnodeid="10" dstpinname="Receive">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output Enum" dstnodeid="12" dstpinname="Enum">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output Enum" dstnodeid="13" dstpinname="Enum">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output Enum" dstnodeid="14" dstpinname="Enum">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output Enum" dstnodeid="15" dstpinname="Enum">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output Enum" dstnodeid="16" dstpinname="Enum">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Enum" dstnodeid="17" dstpinname="Enum">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Ord Value" dstnodeid="18" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Ord Value" dstnodeid="18" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Ord Value" dstnodeid="18" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Ord Value" dstnodeid="18" dstpinname="Input 4">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Ord Value" dstnodeid="18" dstpinname="Input 5">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Ord Value" dstnodeid="18" dstpinname="Input 6">
+   </LINK>
+   <BOUNDS type="Window" left="41535" top="7125" width="10650" height="3675">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="38">
+   <BOUNDS type="Node" left="1230" top="1515" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="|Effects Selecting MIDI Channel No.|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="Ord Value" dstnodeid="38" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="39">
+   <BOUNDS type="Node" left="7680" top="2430" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="|Effects Selecting MIDI Note No.|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="39" dstpinname="Input Value">
+   </LINK>
+   </PATCH>

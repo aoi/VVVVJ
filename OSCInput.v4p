@@ -71,6 +71,8 @@
    </PIN>
    <PIN pinname="OSC Data" visible="1">
    </PIN>
+   <BOUNDS type="Box" width="9240" height="7215" left="0" top="0">
+   </BOUNDS>
    </NODE>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="7">
    <BOUNDS type="Node" left="470" top="2100" width="100" height="100">
@@ -122,14 +124,14 @@
    </LINK>
    <LINK srcnodeid="6" srcpinname="Col" dstnodeid="4" dstpinname="Input Value">
    </LINK>
-   <BOUNDS type="Window" left="12570" top="3225" width="4845" height="5490">
+   <BOUNDS type="Window" left="37965" top="3795" width="4725" height="5220">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="11" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1140" top="435" width="1380" height="240">
+   <BOUNDS type="Box" left="1110" top="435" width="1380" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1140" top="435" width="0" height="0">
+   <BOUNDS type="Node" left="1110" top="435" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" values="192.168.179.4">
    </PIN>
@@ -147,9 +149,9 @@
    <LINK srcnodeid="11" srcpinname="Output String" dstnodeid="5" dstpinname="Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1140" top="960" width="795" height="240">
+   <BOUNDS type="Box" left="1185" top="1455" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1140" top="960" width="0" height="0">
+   <BOUNDS type="Node" left="1185" top="1455" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="9000">
    </PIN>
@@ -163,9 +165,9 @@
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1140" top="1470" width="795" height="240">
+   <BOUNDS type="Box" left="1140" top="945" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1140" top="1470" width="0" height="0">
+   <BOUNDS type="Node" left="1140" top="945" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="8000">
    </PIN>

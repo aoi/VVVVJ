@@ -13,7 +13,7 @@
    </PIN>
    <PIN pinname="Play" visible="1">
    </PIN>
-   <PIN pinname="Loop End Time" slicecount="1" values="0" visible="1">
+   <PIN pinname="Loop End Time" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Loop" slicecount="1" visible="1" values="0">
    </PIN>
@@ -31,10 +31,12 @@
    </PIN>
    <PIN pinname="Texture Size Mode" slicecount="1" values="NonPow2">
    </PIN>
+   <PIN pinname="Wait for every Nth frame" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Video" dstnodeid="1" dstpinname="Video">
    </LINK>
-   <BOUNDS type="Window" left="29265" top="6765" width="9780" height="6930">
+   <BOUNDS type="Window" left="-14925" top="4065" width="9780" height="6930">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>

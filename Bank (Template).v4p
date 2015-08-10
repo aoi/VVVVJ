@@ -1,0 +1,7 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\workspace\uminism\vvvv\Bank (Template).v4p" systemname="Bank (Template)" filename="C:\workspace\uminism\vvvv\Bank (Template).v4p">
+   <BOUNDS type="Window" left="3735" top="9600" width="9000" height="6000">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   </PATCH>

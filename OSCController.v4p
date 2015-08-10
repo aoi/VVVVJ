@@ -442,4 +442,18 @@
    </LINK>
    <LINK srcnodeid="229" srcpinname="Output" dstnodeid="230" dstpinname="Input Node">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="231" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2760" top="1425" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2760" top="1425" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="224" srcpinname="Queue Count" dstnodeid="231" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>

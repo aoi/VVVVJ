@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\Bank.v4p" systemname="Bank" filename="C:\workspace\uminism\vvvv\Bank.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="38385" top="0" width="19215" height="16200">
+   <BOUNDS type="Window" left="39225" top="0" width="14490" height="14565">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -304,26 +304,6 @@
    </NODE>
    <LINK srcnodeid="184" srcpinname="Output Node" dstnodeid="183" dstpinname="Texture">
    </LINK>
-   <NODE systemname="VJingVideoTexture" filename="VJingVideoTexture.v4p" nodename="VJingVideoTexture.v4p" componentmode="Hidden" id="190">
-   <BOUNDS type="Node" left="10080" top="5760" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Filename" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Play" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Do Seek" visible="1">
-   </PIN>
-   <PIN pinname="Loop" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="37170" top="6795" width="9780" height="6930">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="135" srcpinname="Output" dstnodeid="190" dstpinname="Filename">
-   </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="191">
    <BOUNDS type="Node" left="9375" top="8730" width="100" height="100">
    </BOUNDS>
@@ -359,9 +339,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="193" hiddenwhenlocked="0">
-   <BOUNDS type="Node" left="6090" top="600" width="100" height="100">
+   <BOUNDS type="Node" left="285" top="315" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6090" top="600" width="795" height="240">
+   <BOUNDS type="Box" left="285" top="315" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="2" values=",">
    </PIN>
@@ -371,7 +351,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="194">
-   <BOUNDS type="Node" left="6090" top="1125" width="100" height="100">
+   <BOUNDS type="Node" left="285" top="840" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -405,6 +385,8 @@
    <LINK srcnodeid="196" srcpinname="Output" dstnodeid="192" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="194" srcpinname="Output" dstnodeid="11" dstpinname="Input String">
+   <LINKPOINT x="5610" y="199">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="198">
    <BOUNDS type="Node" left="1830" top="4560" width="100" height="100">
@@ -548,8 +530,6 @@
    </LINK>
    <LINK srcnodeid="205" srcpinname="Exists" dstnodeid="208" dstpinname="Switch">
    </LINK>
-   <LINK srcnodeid="190" srcpinname="Texture" dstnodeid="208" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="208" srcpinname="Output" dstnodeid="157" dstpinname="Input 4">
    <LINKPOINT x="4680" y="9735">
    </LINKPOINT>
@@ -649,10 +629,6 @@
    <LINK srcnodeid="7" srcpinname="Output" dstnodeid="213" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="11" srcpinname="Output String" dstnodeid="214" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="190" dstpinname="Do Seek">
-   </LINK>
-   <LINK srcnodeid="213" srcpinname="Output" dstnodeid="190" dstpinname="Loop">
    </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="216">
    <BOUNDS type="Node" left="8910" top="10395" width="100" height="100">
@@ -767,8 +743,6 @@
    <LINK srcnodeid="236" srcpinname="Y Output Value" dstnodeid="223" dstpinname="Time">
    </LINK>
    <LINK srcnodeid="236" srcpinname="Y Output Value" dstnodeid="220" dstpinname="Time">
-   </LINK>
-   <LINK srcnodeid="205" srcpinname="Exists" dstnodeid="190" dstpinname="Evaluate">
    </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="237">
    <BOUNDS type="Node" left="2925" top="9660" width="100" height="100">
@@ -896,8 +870,86 @@
    </LINK>
    <LINK srcnodeid="252" srcpinname="Output" dstnodeid="157" dstpinname="Switch">
    </LINK>
-   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="190" dstpinname="Play">
-   </LINK>
    <LINK srcnodeid="154" srcpinname="Output 1" dstnodeid="156" dstpinname="Filename">
+   </LINK>
+   <NODE systemname="VJingVideoTexture" filename="VJingVideoTexture.v4p" nodename="VJingVideoTexture.v4p" componentmode="Hidden" id="253">
+   <BOUNDS type="Node" left="10080" top="5760" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="11775" top="4155" width="9780" height="6930">
+   </BOUNDS>
+   <PIN pinname="Play" visible="1">
+   </PIN>
+   <PIN pinname="Loop" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Do Seek" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="135" srcpinname="Output" dstnodeid="253" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="253" srcpinname="Texture" dstnodeid="208" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="205" srcpinname="Exists" dstnodeid="253" dstpinname="Evaluate">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="254">
+   <BOUNDS type="Node" left="10230" top="4440" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="255">
+   <BOUNDS type="Node" left="10710" top="3780" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="255" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="255" srcpinname="Output" dstnodeid="254" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="196" srcpinname="Output" dstnodeid="254" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="254" srcpinname="Output" dstnodeid="253" dstpinname="Play">
+   </LINK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="256">
+   <BOUNDS type="Node" left="12330" top="3975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="256" dstpinname="Input">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="257">
+   <BOUNDS type="Node" left="11730" top="4800" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="256" srcpinname="Output" dstnodeid="257" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="258">
+   <BOUNDS type="Node" left="10950" top="4440" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="258" srcpinname="OnChange" dstnodeid="257" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="196" srcpinname="Output" dstnodeid="258" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="258" srcpinname="OnChange" dstnodeid="253" dstpinname="Do Seek">
    </LINK>
    </PATCH>
