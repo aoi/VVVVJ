@@ -821,7 +821,7 @@
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="7560" top="945" width="14805" height="13560">
+   <BOUNDS type="Window" left="38175" top="1275" width="15855" height="13560">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -2415,7 +2415,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="20700" top="270" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="nanoPAD2">
+   <PIN pinname="Input Enum" slicecount="1" values="|TouchOSC Bridge|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Midi Input Port|">
    </PIN>
@@ -2497,7 +2497,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="15735" top="540" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -2507,7 +2507,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Enabled Keyboard Input|">
    </PIN>
