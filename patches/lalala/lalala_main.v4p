@@ -1,0 +1,45 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="C:\workspace\uminism\vvvv\patches\lalala\lalala_main.v4p" systemname="lalala_main" filename="C:\workspace\uminism\vvvv\patches\lalala\lalala_main.v4p">
+   <BOUNDS type="Window" left="29115" top="195" width="15975" height="15180">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1815" top="12420" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1815" top="12420" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="40005" top="10725" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Backbuffer Width" slicecount="1" values="1280">
+   </PIN>
+   <PIN pinname="Backbuffer Height" slicecount="1" values="720">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="DX9Texture (EX9.Texture)" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="3255" top="12960" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="1280">
+   </PIN>
+   <PIN pinname="Height" slicecount="1" values="720">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="EX9 Out" dstnodeid="1" dstpinname="Source">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="2" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="3270" top="13710" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3270" top="13710" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Texture Out" dstnodeid="2" dstpinname="Input Node">
+   </LINK>
+   </PATCH>

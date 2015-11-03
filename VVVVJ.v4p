@@ -835,7 +835,7 @@
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
-   <PIN pinname="Input 4" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input 4" visible="1">
    </PIN>
    <PIN pinname="Input 5" visible="1">
    </PIN>
@@ -2539,7 +2539,7 @@
    </BOUNDS>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input Node" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1224" systemname="IOBox (Node)">
@@ -2877,6 +2877,8 @@
    </PIN>
    <BOUNDS type="Window" left="6765" top="510" width="14475" height="14100">
    </BOUNDS>
+   <PIN pinname="Filename" slicecount="1" values="file1.wmv">
+   </PIN>
    </NODE>
    <LINK srcnodeid="902" srcpinname="Output String" dstnodeid="1249" dstpinname="Bank Input">
    </LINK>

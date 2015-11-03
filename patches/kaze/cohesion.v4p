@@ -1,0 +1,121 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="C:\workspace\uminism\vvvv\patches\kaze\cohesion.v4p" systemname="cohesion" filename="C:\workspace\uminism\vvvv\patches\kaze\cohesion.v4p">
+   <NODE systemname="Add (Value Spectral Vector)" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" nodename="Add (Value Spectral Vector)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1500" top="1515" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="150" values="-11.9302673070814,-0.749419931757324,0.293336990099244,-11.9302673070814,-0.749419931757324,0.293336990099245,-11.9302673070814,-0.749419931757322,0.293336990099244,-11.9302673070814,-0.749419931757322,0.293336990099245,-11.9302673070814,-0.749419931757322,0.293336990099244,-11.9302673070814,-0.749419931757324,0.293336990099245,-11.9302673070814,-0.749419931757326,0.293336990099244,-11.9302673070814,-0.749419931757323,0.293336990099247,-11.9302673070814,-0.749419931757322,0.293336990099245,-11.9302673070814,-0.749419931757323,0.293336990099245,-11.9302673070814,-0.749419931757324,0.293336990099244,-11.9302673070814,-0.749419931757324,0.293336990099245,-11.9302673070814,-0.749419931757324,0.293336990099247,-11.9302673070814,-0.749419931757322,0.293336990099245,-11.9302673070814,-0.749419931757326,0.293336990099245,-11.9302673070814,-0.749419931757323,0.293336990099244,-11.9302673070814,-0.749419931757322,0.293336990099245,-11.9302673070814,-0.749419931757322,0.293336990099244,-11.9302673070814,-0.749419931757324,0.293336990099244,-11.9302673070814,-0.749419931757323,0.293336990099244,-11.9302673070814,-0.749419931757324,0.293336990099245,-11.9302673070814,-0.749419931757324,0.293336990099244,-11.9302673070814,-0.749419931757322,0.293336990099245,-11.9302673070814,-0.749419931757324,0.293336990099245,-11.9302673070814,-0.749419931757324,0.293336990099245,-11.9302673070814,-0.749419931757324,0.293336990099245,-11.9302673070814,-0.749419931757323,0.293336990099245,-11.9302673070814,-0.749419931757324,0.293336990099245,-11.9302673070814,-0.749419931757323,0.293336990099245,-11.9302673070814,-0.749419931757322,0.293336990099244,-11.9302673070814,-0.749419931757322,0.293336990099245,-11.9302673070814,-0.749419931757323,0.293336990099245,-11.9302673070814,-0.749419931757323,0.293336990099245,-11.9302673070814,-0.749419931757322,0.293336990099245,-11.9302673070814,-0.749419931757323,0.293336990099247,-11.9302673070814,-0.749419931757322,0.293336990099244,-11.9302673070814,-0.749419931757324,0.293336990099247,-11.9302673070814,-0.749419931757324,0.293336990099244,-11.9302673070814,-0.749419931757322,0.293336990099245,-11.9302673070814,-0.749419931757322,0.293336990099245,-11.9302673070814,-0.749419931757322,0.293336990099245,-11.9302673070814,-0.749419931757322,0.293336990099245,-11.9302673070814,-0.749419931757322,0.293336990099245,-11.9302673070814,-0.749419931757323,0.293336990099245,-11.9302673070814,-0.749419931757324,0.293336990099245,-11.9302673070814,-0.749419931757324,0.293336990099247,-11.9302673070814,-0.749419931757322,0.293336990099245,-11.9302673070814,-0.749419931757324,0.293336990099245,-11.9302673070814,-0.749419931757322,0.293336990099244,-11.9302673070814,-0.749419931757322,0.293336990099244">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1530" top="2835" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="3" values="-39.5129741584498,-29.4362514033207,-31.0570216739099">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3135" top="510" width="840" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3135" top="510" width="840" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="重心へ向かう">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1515" top="2340" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="50">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="4" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2160" top="2340" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2160" top="2340" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Power">
+   </PIN>
+   </NODE>
+   <NODE id="5" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Position XYZ|">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="500" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="3" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="1" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 2">
+   </LINK>
+   <NODE id="7" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <BOUNDS type="Box" left="885" top="4170" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="885" top="4170" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1" slicecount="3" values="8.32649859133319,-10.0787697643146,-3.25891760562002">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="45540" top="10275" width="5745" height="5265">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="885" top="3315" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="8" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="7" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Count (3d)" filename="%VVVV%\lib\nodes\modules\3D\Count (3D).v4p" nodename="Count (3d)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="2340" top="975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="9" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Count" dstnodeid="3" dstpinname="Input 2">
+   </LINK>
+   </PATCH>
