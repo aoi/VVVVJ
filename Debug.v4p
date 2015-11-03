@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\Debug.v4p" systemname="Debug" filename="C:\workspace\uminism\vvvv\Debug.v4p">
    <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1500" top="1500" width="100" height="100">
@@ -162,9 +162,9 @@
    </LINK>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Log Messages">
    </LINK>
-   <BOUNDS type="Window" left="44385" top="525" width="12930" height="7710">
+   <BOUNDS type="Window" left="47730" top="8820" width="9870" height="6285">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="12" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="5400" top="7875" width="100" height="100">

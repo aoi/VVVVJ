@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\VJingVideoTexture.v4p" systemname="VJingVideoTexture" filename="C:\workspace\uminism\vvvv\VJingVideoTexture.v4p" scrollx="105" scrolly="0">
    <NODE systemname="FileStream (DShow9)" nodename="FileStream (DShow9)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2520" top="1545" width="100" height="100">
@@ -36,9 +36,9 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Video" dstnodeid="1" dstpinname="Video">
    </LINK>
-   <BOUNDS type="Window" left="-14925" top="4065" width="9780" height="6930">
+   <BOUNDS type="Window" left="11775" top="4155" width="9780" height="6930">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="2" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="960" top="210" width="480" height="480">
@@ -111,11 +111,15 @@
    <LINK srcnodeid="1" srcpinname="Texture Out" dstnodeid="5" dstpinname="Input Node">
    </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="9">
-   <BOUNDS type="Node" left="1650" top="1950" width="100" height="100">
+   <BOUNDS type="Node" left="1635" top="2910" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Initialize" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Default 1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="10">
@@ -128,7 +132,11 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Output 1" dstnodeid="10" dstpinname="Input 2">
+   <LINK srcnodeid="9" srcpinname="Output 1" dstnodeid="10" dstpinname="Input 2" linkstyle="Bezier">
+   <LINKPOINT x="875" y="2905">
+   </LINKPOINT>
+   <LINKPOINT x="2425" y="1505">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="10" srcpinname="Output" dstnodeid="0" dstpinname="Play">
    </LINK>
@@ -147,7 +155,7 @@
    <LINK srcnodeid="0" srcpinname="Position" dstnodeid="13" dstpinname="Input 2">
    </LINK>
    <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="3075" top="2295" width="100" height="100">
+   <BOUNDS type="Node" left="3075" top="2310" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -216,20 +224,36 @@
    <BOUNDS type="Box" left="960" top="855">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="18" srcpinname="Output" dstnodeid="10" dstpinname="Input 1">
    </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="3930" top="1545" width="100" height="100">
+   <BOUNDS type="Node" left="4530" top="1605" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Initialize" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Default 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Duration" dstnodeid="19" dstpinname="Default 1">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Duration" dstnodeid="19" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="4545" top="2145" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Duration" dstnodeid="19" dstpinname="Input 1">
+   <LINK srcnodeid="19" srcpinname="Output 1" dstnodeid="20" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="19" srcpinname="Output 1" dstnodeid="0" dstpinname="Loop End Time">
+   <LINK srcnodeid="20" srcpinname="Output 1" dstnodeid="0" dstpinname="Loop End Time">
    </LINK>
    </PATCH>

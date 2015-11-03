@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\workspace\uminism\vvvv\VVVVJ.v4p" systemname="VVVVJ" filename="C:\workspace\uminism\vvvv\VVVVJ.v4p" scrollx="0" scrolly="0" locked="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="C:\workspace\uminism\vvvv\VVVVJ.v4p" systemname="VVVVJ" filename="C:\workspace\uminism\vvvv\VVVVJ.v4p" scrollx="0" scrolly="15" locked="0">
    <BOUNDS type="Window" left="30" top="0" width="28770" height="13785">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="GetMatchIndex" filename="GetMatchIndex.v4p" nodename="GetMatchIndex.v4p" componentmode="Hidden" id="421">
    <BOUNDS type="Node" left="14520" top="5385" width="0" height="0">
@@ -662,34 +662,6 @@
    </LINK>
    <LINK srcnodeid="763" srcpinname="Layer 8" dstnodeid="788" dstpinname="Layers">
    </LINK>
-   <NODE systemname="Bank" filename="Bank.v4p" nodename="Bank.v4p" componentmode="Hidden" id="790">
-   <BOUNDS type="Node" left="19500" top="5070" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Bank ID">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Current Index" visible="1">
-   </PIN>
-   <PIN pinname="BankIndex">
-   </PIN>
-   <PIN pinname="Filename" slicecount="1" values="file11.wmv">
-   </PIN>
-   <BOUNDS type="Window" left="38385" top="0" width="19215" height="16200">
-   </BOUNDS>
-   <PIN pinname="Enable" visible="1">
-   </PIN>
-   <PIN pinname="Bank Input" visible="1" slicecount="2" values="D,0.0000">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Texture In" visible="0" pintype="Input" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Create Thumbnail" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE systemname="Bank" filename="Bank.v4p" nodename="Bank.v4p" componentmode="Hidden" id="792">
    <BOUNDS type="Node" left="22560" top="5055" width="100" height="100">
    </BOUNDS>
@@ -802,34 +774,6 @@
    <PIN pinname="Create Thumbnail" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="Bank" filename="Bank.v4p" nodename="Bank.v4p" componentmode="Hidden" id="832">
-   <BOUNDS type="Node" left="780" top="5055" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Bank ID">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Current Index" visible="1">
-   </PIN>
-   <PIN pinname="BankIndex">
-   </PIN>
-   <PIN pinname="Filename" slicecount="1" visible="1" values="file1.wmv">
-   </PIN>
-   <PIN pinname="Enable" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="38175" top="1275" width="15855" height="13560">
-   </BOUNDS>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Create Thumbnail" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Bank Input" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="SwitchBank" filename="SwitchBank.v4p" nodename="SwitchBank.v4p" componentmode="Hidden" id="831" hiddenwhenlocked="0">
    <BOUNDS type="Node" left="277" top="4140" width="12165" height="270">
    </BOUNDS>
@@ -891,7 +835,7 @@
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
-   <PIN pinname="Input 4" visible="1">
+   <PIN pinname="Input 4" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Input 5" visible="1">
    </PIN>
@@ -1324,34 +1268,6 @@
    </LINK>
    <LINK srcnodeid="828" srcpinname="Layer 8" dstnodeid="818" dstpinname="Layers" hiddenwhenlocked="1">
    </LINK>
-   <NODE systemname="Bank" filename="Bank.v4p" nodename="Bank.v4p" componentmode="Hidden" id="816">
-   <BOUNDS type="Node" left="5220" top="5070" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Bank ID">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Current Index" visible="1">
-   </PIN>
-   <PIN pinname="BankIndex">
-   </PIN>
-   <PIN pinname="Filename" slicecount="1" values="file4.wmv">
-   </PIN>
-   <BOUNDS type="Window" left="11985" top="1065" width="19215" height="16200">
-   </BOUNDS>
-   <PIN pinname="Enable" visible="1">
-   </PIN>
-   <PIN pinname="Bank Input" visible="1">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Texture In" visible="0" pintype="Input" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Create Thumbnail" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE systemname="Bank" filename="Bank.v4p" nodename="Bank.v4p" componentmode="Hidden" id="815">
    <BOUNDS type="Node" left="6705" top="5025" width="100" height="100">
    </BOUNDS>
@@ -2353,7 +2269,7 @@
    <LINK srcnodeid="589" srcpinname="Layer" dstnodeid="969" dstpinname="Layers">
    </LINK>
    <NODE id="661" border="1" componentmode="InAWindow" systemname="Renderer (EX9)" nodename="Renderer (EX9)" stayontop="0">
-   <BOUNDS type="Window" left="29130" top="9405" width="6855" height="5940">
+   <BOUNDS type="Window" left="47865" top="0" width="9735" height="6870">
    </BOUNDS>
    <BOUNDS type="Node" left="12450" top="10965" width="1740" height="270">
    </BOUNDS>
@@ -2483,7 +2399,7 @@
    </PIN>
    <PIN pinname="Slider Alignment" slicecount="1" values="NeighbourY">
    </PIN>
-   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0">
+   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.424892703862661">
    </PIN>
    <PIN pinname="Minimum" slicecount="1" values="0">
    </PIN>
@@ -2519,7 +2435,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="10050" top="0" width="7500" height="4915">
    </BOUNDS>
-   <BOUNDS type="Window" left="44385" top="525" width="12930" height="7710">
+   <BOUNDS type="Window" left="47730" top="8820" width="9870" height="6285">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1216" systemname="IOBox (Value Advanced)">
@@ -2596,11 +2512,7 @@
    <LINKPOINT x="16140" y="7280">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="902" srcpinname="Output String" dstnodeid="832" dstpinname="Bank Input">
-   </LINK>
    <LINK srcnodeid="900" srcpinname="Output String" dstnodeid="979" dstpinname="Bank Input">
-   </LINK>
-   <LINK srcnodeid="899" srcpinname="Output String" dstnodeid="816" dstpinname="Bank Input">
    </LINK>
    <LINK srcnodeid="898" srcpinname="Output String" dstnodeid="815" dstpinname="Bank Input">
    </LINK>
@@ -2627,7 +2539,7 @@
    </BOUNDS>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Input Node" visible="1">
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1224" systemname="IOBox (Node)">
@@ -2684,11 +2596,7 @@
    </LINK>
    <LINK srcnodeid="1222" srcpinname="Output Node" dstnodeid="830" dstpinname="Input 3" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="832" srcpinname="Texture Out" dstnodeid="1228" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="979" srcpinname="Texture Out" dstnodeid="1222" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="816" srcpinname="Texture Out" dstnodeid="1223" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="815" srcpinname="Texture Out" dstnodeid="1224" dstpinname="Input Node">
    </LINK>
@@ -2824,8 +2732,6 @@
    </LINK>
    <LINK srcnodeid="599" srcpinname="Texture Out" dstnodeid="1240" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="790" srcpinname="Texture Out" dstnodeid="1239" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="980" srcpinname="Texture Out" dstnodeid="1238" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="792" srcpinname="Texture Out" dstnodeid="1237" dstpinname="Input Node">
@@ -2855,8 +2761,6 @@
    <LINK srcnodeid="871" srcpinname="Output String" dstnodeid="643" dstpinname="Bank Input">
    </LINK>
    <LINK srcnodeid="873" srcpinname="Output String" dstnodeid="599" dstpinname="Bank Input">
-   </LINK>
-   <LINK srcnodeid="874" srcpinname="Output String" dstnodeid="790" dstpinname="Bank Input">
    </LINK>
    <LINK srcnodeid="875" srcpinname="Output String" dstnodeid="980" dstpinname="Bank Input">
    </LINK>
@@ -2895,5 +2799,95 @@
    <LINK srcnodeid="872" srcpinname="Output" dstnodeid="1241" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="1241" srcpinname="Output 1" dstnodeid="421" dstpinname="Spread">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="1242" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="15" top="15" width="555" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15" top="15" width="1905" height="585">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="VVVVJ">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="20">
+   </PIN>
+   <PIN pinname="Show Characters [#0..#32,#127]" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="UpdateWindow (Windows)" nodename="UpdateWindow (Windows)" componentmode="Hidden" id="1245">
+   <BOUNDS type="Node" left="8730" top="1050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Update" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1246" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9735" top="360" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9735" top="360" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1246" srcpinname="Y Output Value" dstnodeid="1245" dstpinname="Update">
+   </LINK>
+   <NODE systemname="kaze" filename="patches\kaze\kaze.v4p" nodename="patches\kaze\kaze.v4p" componentmode="Hidden" id="1247">
+   <BOUNDS type="Node" left="19455" top="5085" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bank Input" visible="1" slicecount="2" values="Q,0.0000">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="28800" top="0" width="4815" height="4605">
+   </BOUNDS>
+   <PIN pinname="Create Thumbnail" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="lalala" filename="patches\lalala\lalala.v4p" nodename="patches\lalala\lalala.v4p" componentmode="Hidden" id="1248">
+   <BOUNDS type="Node" left="5265" top="5055" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bank Input" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="30375" top="3840" width="4350" height="6015">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Bank" filename="Bank.v4p" nodename="Bank.v4p" componentmode="Hidden" id="1249">
+   <BOUNDS type="Node" left="705" top="5085" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bank Input" visible="1" slicecount="2" values=",">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Create Thumbnail" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS type="Window" left="6765" top="510" width="14475" height="14100">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="902" srcpinname="Output String" dstnodeid="1249" dstpinname="Bank Input">
+   </LINK>
+   <LINK srcnodeid="1249" srcpinname="Texture Out" dstnodeid="1228" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="874" srcpinname="Output String" dstnodeid="1247" dstpinname="Bank Input">
+   </LINK>
+   <LINK srcnodeid="1247" srcpinname="Texture Out" dstnodeid="1239" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="899" srcpinname="Output String" dstnodeid="1248" dstpinname="Bank Input">
+   </LINK>
+   <LINK srcnodeid="1248" srcpinname="Texture Out" dstnodeid="1223" dstpinname="Input Node">
    </LINK>
    </PATCH>

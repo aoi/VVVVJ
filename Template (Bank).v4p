@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\Template (Bank).v4p" systemname="Template (Bank)" filename="C:\workspace\uminism\vvvv\Template (Bank).v4p">
    <BOUNDS type="Window" left="36660" top="6600" width="9240" height="6015">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Bank" filename="Bank.v4p" nodename="Bank.v4p" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="330" top="2235" width="100" height="100">
@@ -25,7 +25,7 @@
    </PIN>
    </NODE>
    <NODE systemname="AsValue (String)" nodename="AsValue (String)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="330" top="1230" width="100" height="100">
+   <BOUNDS type="Node" left="540" top="1275" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>

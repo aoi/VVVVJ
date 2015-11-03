@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="C:\workspace\uminism\vvvv\Bank.v4p" systemname="Bank" filename="C:\workspace\uminism\vvvv\Bank.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="38175" top="1275" width="15855" height="13560">
+   <BOUNDS type="Window" left="6765" top="510" width="14475" height="14100">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="DecodeOSC" filename="DecodeOSC.v4p" nodename="DecodeOSC.v4p" componentmode="Hidden" id="9">
    <BOUNDS type="Node" left="10035" top="2745" width="0" height="0">
